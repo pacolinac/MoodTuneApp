@@ -6,6 +6,7 @@ Naša aplikacija koristi snagu glazbene terapije kako bi pozitivno utjecala na v
 
 MoodTunes je vizualno atraktivna, jednostavna za korištenje, i prilagođena svim korisnicima – od onih koji žele smirenje do onih koji traže motivaciju ili sreću. Aplikacija koristi psihološke metode poput semantičkog diferencijala za praćenje promjena u raspoloženju.
 
+**Funkcijski zahtjevi**
 Funkcionalni zahtjevi
 1. Početni ekran (Home Screen)
 •	Na početnom ekranu prikazuju se četiri glavne kategorije emocija (Calmness, Happiness, Motivation, Sadness). Na stranici je napisana motivacija aplikacije kao i sažetak istraživanja korelacije boja i emocija.
@@ -58,7 +59,15 @@ Nefunkcionalni zahtjevi
 •	Brza automatska ažuriranja baze podataka.
 6. Klijent-poslužitelj:
 •	Aplikacija je izvedena u arhitekturi klijent-poslužitelj. Omogućava jasnu podjelu između klijentske strane i poslužiteljske strane.
-Tehnologija
+
+**Tehnologija**
 Za  komunikaciju unutar našeg tima koristimo Discord i WhatsApp, koji nam omogućava brzu razmjenu ideja i suradnju u realnom vremenu. 
 Odabrali smo React za frontend, koji omogućava izradu interaktivnih i dinamičnih korisničkih sučelja.
 Za backend odabrali smo Javu i Spring Framework.
+
+**Članovi tima**
+Petra Predrijevac 
+Ema Bradić 
+Antonio Poleto 
+Dorotea Požega
+Patrick Mraz
