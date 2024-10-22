@@ -1,0 +1,65 @@
+Zahtjevi
+
+Neregistrirani korisnik može:
+  1.	Pregledati informacije o aplikaciji i kako radi.
+  2.	Pristupiti procesu stvaranja korisničkog računa.
+  3.	Vidjeti popis dostupnih pjesama i kategorija (bez detalja).
+Registracija korisnika: 
+  4. Započinje unosom korisničkog imena i email adrese. 
+  5. Sustav šalje link za aktivaciju računa putem emaila. 
+  6. Prilikom aktivacije unosi se lozinka za dovršetak registracije.
+Registrirani korisnik može: 
+  7. Birati kategoriju raspoloženja (calmness, happiness, motivation, sadness). 
+  8. Pregledati i slušati pjesme u odabranoj kategoriji. 
+  9. Odabrati do tri pjesme iz jedne kategorije za slušanje. 
+  10. Popuniti upitnik (semantički diferencijal) prije slušanja pjesama. 
+  11. Slušati pjesme prema vlastitom izboru. 
+  12. Popuniti upitnik nakon slušanja pjesama kako bi ocijenio promjenu raspoloženja. 
+  13. Pregledati rezultate svojih odgovora i usporediti ih. 
+  14. Pohraniti povijest svojih rezultata za kasniju analizu. 
+  15. Urediti svoj korisnički profil (ime, email, preferirane kategorije).
+Sustav (aplikacija): 
+  17. Pohranjuje odgovore korisnika za analizu promjene raspoloženja. 
+  18. Prilagođava preporuke pjesama na temelju prethodnih ocjena korisnika. 
+  19. Prikazuje vizualno atraktivne grafove i dijagrame promjene raspoloženja. 
+  (20.) Šalje obavijesti putem aplikacije i emaila o novim pjesmama ili ažuriranjima. 
+  21. Omogućava automatsku sinkronizaciju rezultata među uređajima korisnika.
+Funkcionalnosti administratora:
+Upravljanje korisnicima:
+  1.	Pregled, uređivanje i brisanje korisničkih računa.
+  2.	Resetiranje lozinki korisnicima na zahtjev.
+  3.	Pregled korisničke aktivnosti (poslušane pjesme, ispunjeni upitnici, povijest raspoloženja).
+Upravljanje sadržajem aplikacije:
+  4.	Dodavanje, uređivanje i uklanjanje pjesama u svim kategorijama (calmness, happiness, motivation, sadness).
+  5.	Upravljanje kategorijama emocija (dodavanje novih kategorija, uređivanje postojećih).
+  6.	Pregled statistika korištenja pjesama (najslušanije pjesme, pjesme s najvišim ocjenama).
+Praćenje i analiza podataka:
+  7.	Pregled statistika o promjenama raspoloženja korisnika nakon slušanja pjesama.
+  8.	Generiranje izvještaja o ponašanju korisnika (npr. koje kategorije najviše biraju, koji je najčešći obrazac promjene raspoloženja).
+  9.	Analiza povijesti upitnika za korisnike radi poboljšanja preporuka i korisničkog iskustva.
+Upravljanje upitnicima:
+  10.	Dodavanje, uređivanje i brisanje pitanja u semantičkom diferencijalu.
+  11.	Konfiguriranje različitih verzija upitnika za različite korisničke grupe.
+  12.	Prilagodba težine ili vrste pitanja na temelju povratnih informacija od korisnika.
+Obavijesti i komunikacija:
+  13.	Slanje globalnih obavijesti svim korisnicima (npr. ažuriranja aplikacije, nove pjesme).
+  14.	Slanje personaliziranih obavijesti pojedinim korisnicima ili grupama (npr. preporuke pjesama na temelju njihovih preferencija).
+  15.	Upravljanje email obavijestima i push notifikacijama.
+Sigurnost i održavanje:
+  16.	Praćenje sigurnosnih prijetnji i aktivnosti (npr. neuspjeli pokušaji prijave, neobična aktivnost).
+  17.	Vođenje sigurnosnih kopija korisničkih podataka i pjesama.
+  18.	Praćenje stabilnosti aplikacije (monitoring servera, praćenje performansi).
+Generiranje izvještaja:
+  19.	Izvještaji o najaktivnijim korisnicima, najpopularnijim pjesmama i kategorijama.
+  20.	Pregled i analiza statistika o postignutim ciljevima aplikacije (npr. utjecaj glazbe na raspoloženje).
+  21.	Izvještaji o korisnicima koji su prijavili tehničke probleme ili dali povratne informacije.
+
+________________________________________
+Nefunkcionalni zahtjevi:
+1.	Aplikacija mora učitavati sadržaj u roku od 3-5 sekundi.
+2.	Aplikacija mora podržavati povećanje broja korisnika bez pada performansi.
+3.	Svi korisnički podaci, uključujući odgovore i povijest raspoloženja, moraju biti šifrirani.
+4.	Korisnici moraju imati mogućnost anonimnog korištenja aplikacije, a podaci se moraju prikupljati u skladu s GDPR-om.
+5.	Aplikacija mora biti vizualno atraktivna i jednostavna za korištenje, s intuitivnim navigacijskim elementima.
+6.	Aplikacija mora omogućavati jednostavna i redovita ažuriranja.
+7.	Omogućiti slušanje pjesama i ispunjavanje upitnika bez internetske veze, s kasnijom sinkronizacijom podataka.
