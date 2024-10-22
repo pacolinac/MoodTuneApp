@@ -1,8 +1,6 @@
 MoodTunes je aplikacija koja koristi snagu glazbe kako bi podržala mentalno zdravlje, prilagodila se vašem trenutnom stanju uma i poboljšala vaše raspoloženje.
 
-MoodTunes analizira četiri ključna emocionalna stanja – smirenost, sreća, motivacija i tuga – i nudi personalizirane glazbene preporuke iz naše bogate kolekcije od preko 80 pažljivo odabranih pjesama. Korisnici biraju kategoriju emocija, odaberu nekoliko pjesama koje slušaju, a aplikacija prati promjene u raspoloženju kroz kratke upitnike prije i poslije slušanja glazbe.
-
-Naša aplikacija koristi snagu glazbene terapije kako bi pozitivno utjecala na vaše emocionalno stanje, omogućavajući vam da se osjećate bolje u bilo kojem trenutku. Svaki korisnik može birati glazbu koja najbolje odgovara njegovom trenutnom raspoloženju i potrebi, dok aplikacija prati kako se njegovo raspoloženje mijenja tijekom korištenja.
+MoodTunes analizira četiri ključna emocionalna stanja – smirenost, sreća, motivacija i tuga – i nudi personalizirane glazbene preporuke iz naše bogate kolekcije od 80  odabranih pjesama. Korisnici biraju kategoriju emocija, odaberu nekoliko pjesama koje slušaju, a aplikacija prati promjene u raspoloženju kroz kratke upitnike prije i poslije slušanja glazbe.
 
 MoodTunes je vizualno atraktivna, jednostavna za korištenje, i prilagođena svim korisnicima – od onih koji žele smirenje do onih koji traže motivaciju ili sreću. Aplikacija koristi psihološke metode poput semantičkog diferencijala za praćenje promjena u raspoloženju.
 
