@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c8bf5141-318f-4811-b5dc-2b0a6bd1fcda" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/MoodTuneApp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/public/photos/background-lower.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/public/photos/background-upper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/components/FeelAfter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/components/FeelBefore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/components/Form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/components/Music.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/components/PersonalInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/components/Privole.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/components/WannaFeel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/components/form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/components/music.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/components/personalInfo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/components/pocetna.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/components/pocetna.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/components/wannafeel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../moodtune/src/index.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "antonioP4157"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/pacolinac/MoodTuneApp.git",
+    "accountId": "8ec697b3-ca1c-4679-8eb8-9c072ee790a4"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2rcVmXFEkSb4iKYpf8QEgpJnPoF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "devDemo",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Antonio/Documents/GitHub/MoodTuneApp/IzvorniKod/frontend",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8bf5141-318f-4811-b5dc-2b0a6bd1fcda" name="Changes" comment="" />
+      <created>1736858509548</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736858509548</updated>
+      <workItem from="1736858510661" duration="205000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
