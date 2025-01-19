@@ -29,14 +29,22 @@ public class PjesmaServis {
     }
 
     public void createPjesma(PjesmaRequestDTO songRequest) {
-    	 Pjesma pjesma = new Pjesma();
-         pjesma.setNaslov(songRequest.getNaslov());
-         pjesma.setAutor(songRequest.getAutor());
-         pjesma.setZanr(songRequest.getZanr());
-         pjesma.setUrl(songRequest.getUrl());
-         pjesma.setEmocija(songRequest.getEmocija());
-         
-         pjesmaRepository.save(pjesma);     }
+        Emocija emocija = emocijaRepository.findById(songRequest.getEmocija().getEmocijaId())
+                .orElseGet(() -> {
+                    Emocija newEmocija = new Emocija();
+                    newEmocija.setEmocija(songRequest.getEmocija().getEmocija());
+                    return emocijaRepository.save(newEmocija);
+                });
+
+        Pjesma pjesma = new Pjesma();
+        pjesma.setNaslov(songRequest.getNaslov());
+        pjesma.setAutor(songRequest.getAutor());
+        pjesma.setZanr(songRequest.getZanr());
+        pjesma.setUrl(songRequest.getUrl());
+        pjesma.setEmocija(emocija);
+
+        pjesmaRepository.save(pjesma);
+    }
 
     public void updatePjesma(int id, PjesmaRequestDTO songRequest) {
         Optional<Pjesma> existingPjesma = pjesmaRepository.findById(id);

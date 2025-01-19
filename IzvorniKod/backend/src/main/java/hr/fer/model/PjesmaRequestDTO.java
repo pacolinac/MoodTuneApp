@@ -11,6 +11,17 @@ public class PjesmaRequestDTO {
 	public String getNaslov() {
 		return this.naslov;
 	}
+
+	@Override
+	public String toString() {
+		return "PjesmaRequestDTO{" +
+				"naslov='" + naslov + '\'' +
+				", autor='" + autor + '\'' +
+				", zanr='" + zanr + '\'' +
+				", url='" + url + '\'' +
+				", emocija=" + (emocija != null ? emocija.toString() : "null") +
+				'}';
+	}
 	
 	public void setNaslov(String naslov) { 
         this.naslov = naslov;
