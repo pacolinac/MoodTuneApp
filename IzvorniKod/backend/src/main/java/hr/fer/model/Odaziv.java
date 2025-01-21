@@ -6,30 +6,30 @@ import lombok.*;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "Odazivi")
+@Table(name = "odazivi") // Ensure the table name matches exactly
 public class Odaziv {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "odazivId") // Map to the exact database column
     private Integer odazivId;
 
     @ManyToOne
-    @JoinColumn(name = "KorisnikId", referencedColumnName = "KorisnikId")
+    @JoinColumn(name = "korisnikId", referencedColumnName = "korisnikId")
     private Korisnik korisnik;
 
-    @ManyToOne
-    @JoinColumn(name = "PitanjeId", referencedColumnName = "PitanjeId")
-    private Pitanje pitanje;
+    @Column(name = "pitanjeText", nullable = false)
+    private String pitanjeText;
+
+    @Column(name = "odgovor", nullable = false)
+    private Integer odgovor;
 
     @ManyToOne
-    @JoinColumn(name = "OdgovorId", referencedColumnName = "OdgovorId")
-    private Odgovor odgovor;
-
-    @ManyToOne
-    @JoinColumn(name = "PjesmaId", referencedColumnName = "PjesmaId")
+    @JoinColumn(name = "pjesmaId", referencedColumnName = "pjesmaId")
     private Pjesma pjesma;
 
+    @Column(name = "boja")
     private String boja;
 
-    @Column(name = "PreListening")
+    @Column(name = "preListening")
     private Boolean preListening;
 }

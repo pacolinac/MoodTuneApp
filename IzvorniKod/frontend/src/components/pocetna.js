@@ -11,9 +11,9 @@ function Pocetna() {
     const sendData = async () => {
         const payload = {
             korisnikId: 1,
-            pitanjeId: 2,
-            odgovorId: 3,
-            pjesmaId: 4,
+            pitanjeId: 8,
+            odgovorId: 1,
+            pjesmaId: 2,
             boja: "blue",
             preListening: true,
         };

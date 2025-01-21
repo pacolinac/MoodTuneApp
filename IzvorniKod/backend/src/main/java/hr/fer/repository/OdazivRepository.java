@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface OdazivRepository extends JpaRepository<Odaziv, Integer> {
     List<Odaziv> findByKorisnikKorisnikId(int korisnikId);
-    List<Odaziv> findByPitanjePitanjeId(int pitanjeId);
+    List<Odaziv> findByPitanjeText(String pitanjeText); // Updated to use pitanjeText
     List<Odaziv> findByPjesmaPjesmaId(int pjesmaId);
 }

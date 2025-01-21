@@ -14,14 +14,13 @@ import java.util.List;
 public class AdminController {
 
     @Autowired
-    private PitanjeServis questionService;
-    @Autowired
     private PjesmaServis songService;
     @Autowired
     private KorisnikServis userService;
     @Autowired
     private OdazivServis responseService;
-    
+
+
     // POST /api/admin/login
     // Šalji prijavu admina, vrati odobrenje
     @PostMapping("/login")
@@ -29,39 +28,19 @@ public class AdminController {
         return userService.authenticateAdmin(loginRequest);
     }
 
-    // GET /api/admin/questions
-    // Vrati sva pitanja
-    @GetMapping("/questions")
-    public List<Pitanje> getQuestions() {
-        return questionService.getAllPitanja();
-    }
-
-    // POST /api/admin/questions
-    // Šalji pitanja
-    @PostMapping("/questions")
-    public void createQuestion(@RequestBody PitanjeRequestDTO questionRequest) {
-        questionService.createPitanje(questionRequest);
-    }
-
-    // PUT /api/admin/questions/{id}
-    // Uredi pitanje
-    @PutMapping("/questions/{id}")
-    public void updateQuestion(@PathVariable int id, @RequestBody PitanjeRequestDTO questionRequest) {
-        questionService.updatePitanje(id, questionRequest);
-    }
-
-    // DELETE /api/admin/questions/{id}
-    // Briši pitanje
-    @DeleteMapping("/questions/{id}")
-    public void deleteQuestion(@PathVariable int id) {
-        questionService.deletePitanje(id);
-    }
 
     // GET /api/admin/songs
     // Vrati sve pjesme
-    @GetMapping("/songs")
+    @GetMapping("/allsongs")
     public List<Pjesma> getAllSongs() {
         return songService.getAllPjesme();
+    }
+
+    // GET /api/admin/randomsong
+    // Random pjesma
+    @GetMapping("/randomsong")
+    public Pjesma getRandomSong(@RequestParam Pjesma.Emocija mood) {
+        return songService.getRandomSong(mood);
     }
 
     // POST /api/admin/songs

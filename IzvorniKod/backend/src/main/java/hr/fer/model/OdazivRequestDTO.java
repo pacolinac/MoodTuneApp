@@ -2,8 +2,8 @@ package hr.fer.model;
 
 public class OdazivRequestDTO {
     private Integer korisnikId;
-    private Integer pitanjeId;
-    private Integer odgovorId;
+    private String pitanjeText;
+    private Integer odgovor;
     private Integer pjesmaId;
     private String boja;
     private Boolean preListening;
@@ -16,9 +16,11 @@ public class OdazivRequestDTO {
     public String toString() {
         return "OdazivRequestDTO{" +
                 "korisnikId=" + korisnikId +
-                ", pitanjeId=" + pitanjeId +
-                ", odgovorId=" + odgovorId +
+                ", pitanjeText='" + pitanjeText + '\'' +
+                ", odgovor=" + odgovor +
                 ", pjesmaId=" + pjesmaId +
+                ", boja='" + boja + '\'' +
+                ", preListening=" + preListening +
                 '}';
     }
 
@@ -26,20 +28,20 @@ public class OdazivRequestDTO {
         this.korisnikId = korisnikId;
     }
 
-    public Integer getPitanjeId() {
-        return pitanjeId;
+    public String getPitanjeText() {
+        return pitanjeText;
     }
 
-    public void setPitanjeId(Integer pitanjeId) {
-        this.pitanjeId = pitanjeId;
+    public void setPitanjeText(String pitanjeText) {
+        this.pitanjeText = pitanjeText;
     }
 
-    public Integer getOdgovorId() {
-        return odgovorId;
+    public Integer getOdgovor() {
+        return odgovor;
     }
 
-    public void setOdgovorId(Integer odgovorId) {
-        this.odgovorId = odgovorId;
+    public void setOdgovor(Integer odgovor) {
+        this.odgovor = odgovor;
     }
 
     public Integer getPjesmaId() {

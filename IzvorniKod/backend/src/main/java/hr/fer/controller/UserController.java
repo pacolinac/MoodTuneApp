@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import hr.fer.model.*;
-import hr.fer.service.EmocijaServis;
 import hr.fer.service.KorisnikServis;
 import hr.fer.service.OdazivServis;
 import hr.fer.service.PjesmaServis;
@@ -15,8 +14,6 @@ import java.util.List;
 @RequestMapping("/api")
 public class UserController {
 
-    @Autowired
-    private EmocijaServis emocijaService;
     @Autowired
     private PjesmaServis pjesmaService;
     @Autowired
@@ -31,12 +28,6 @@ public class UserController {
         korisnikService.saveKorisnik(korisnikRequest);
     }
 
-    // GET /api/emotions
-    // Vrati sve emocije
-    @GetMapping("/emotions")
-    public List<Emocija> getEmocije() {
-        return emocijaService.getAllEmocije();
-    }
 
     // POST /api/responses
     // Šalji odaziv
@@ -48,7 +39,7 @@ public class UserController {
     // GET /api/songs?mood=happy
     // Vrati pjesmu po moodu
     @GetMapping("/songs")
-    public List<Pjesma> getSongsByMood(@RequestParam String mood) {
+    public List<Pjesma> getSongsByMood(@RequestParam Pjesma.Emocija mood) {
         return pjesmaService.getPjesmaByEmocija(mood);
     }
 
