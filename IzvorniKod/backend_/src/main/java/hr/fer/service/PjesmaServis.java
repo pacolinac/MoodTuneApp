@@ -44,13 +44,17 @@ public class PjesmaServis {
          pjesma.setAutor(songRequest.getAutor());
          pjesma.setZanr(songRequest.getZanr());
          pjesma.setUrl(songRequest.getUrl());
-         pjesma.setEmocija(songRequest.getEmocija());
-         
+         Emocija emocija = emocijaRepository.findByEmocija(songRequest.getEmocija());
+         if (emocija != null) {
+             pjesma.setEmocija(emocija);
+         } else {
+             throw new RuntimeException("Emocija not found for: " + songRequest.getEmocija());
+         }         
          pjesmaRepository.save(pjesma);     }
 
     public void updatePjesma(int id, PjesmaRequestDTO songRequest) {
         Optional<Pjesma> existingPjesma = pjesmaRepository.findById(id);
-        
+        System.out.println(id + " " + songRequest);
         if (existingPjesma.isPresent()) {
             Pjesma pjesma = existingPjesma.get();
             pjesma.setNaslov(songRequest.getNaslov());
@@ -58,10 +62,12 @@ public class PjesmaServis {
             pjesma.setZanr(songRequest.getZanr());
             pjesma.setUrl(songRequest.getUrl());
             
-            Emocija emocija = emocijaRepository.findById(songRequest.getEmocija().getEmocijaId())
-                    .orElseThrow(() -> new RuntimeException("Emocija not found"));
-            pjesma.setEmocija(emocija);
-            
+            Emocija emocija = emocijaRepository.findByEmocija(songRequest.getEmocija());
+            if (emocija != null) {
+            	pjesma.setEmocija(emocija);
+            	} else {
+            		throw new RuntimeException("Emocija not found for: " + songRequest.getEmocija());
+            	}  
             pjesmaRepository.save(pjesma);
         } else {
             throw new RuntimeException("Song not found");

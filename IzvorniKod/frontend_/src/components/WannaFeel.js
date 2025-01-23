@@ -1,54 +1,55 @@
-import "./wannafeel.css"
+import React, { useState } from "react";
+import "./Wannafeel.css";
 
+function WannaFeel({ user, setUser }) {
+    const [selectedMood, setSelectedMood] = useState(null);
 
-function WannaFeel({formData, setFormData, page, setPage}) {
+    const handleMoodChange = (mood) => {
+        let stanjeZeljeno = "";
+        let pitanjeId = 0;
 
-    function handleMotivated() {
-        setFormData(prevFormData => ({
-            ...prevFormData,
-            wannaFeel: "motivirano"
-        }))
-        setPage(prevPage => prevPage + 1)
-        
-    }
-    function handleHappy() {
-        setFormData(prevFormData => ({
-            ...prevFormData,
-            wannaFeel: "sretno"
-        }))
-        setPage(prevPage => prevPage + 1)
-    }
-    function handleSad() {
-        setFormData(prevFormData => ({
-            ...prevFormData,
-            wannaFeel: "tuzno"
-        }))
-        setPage(prevPage => prevPage + 1)
-    }
-    function handleCalm() {
-        setFormData(prevFormData => ({
-            ...prevFormData,
-            wannaFeel: "opusteno"
-        }))
-        setPage(prevPage => prevPage + 1)
-    }
+        // Setting corresponding values for each mood
+        switch (mood) {
+            case "Motivated":
+                stanjeZeljeno = "motiviran";
+                pitanjeId = 3;
+                break;
+            case "Happy":
+                stanjeZeljeno = "sretan";
+                pitanjeId = 2;
+                break;
+            case "Sad":
+                stanjeZeljeno = "tuzan";
+                pitanjeId = 1;
+                break;
+            case "Calm":
+                stanjeZeljeno = "smiren";
+                pitanjeId = 4;
+                break;
+            default:
+                stanjeZeljeno = "";
+                pitanjeId = 0;
+        }
 
-    console.log(formData)
+        // Update user state with selected mood and associated values
+        setSelectedMood(mood);
+        setUser((prevUser) => ({
+            ...prevUser,
+            stanjeZeljeno: stanjeZeljeno, 
+        }));
+    };
 
-    
-
-    return(
+    return (
         <div className="wrapper">
-            <h2 className="question">2. Kako bi se željeli osjećati?</h2>
-
+            <h2 className="question">2. How would you like to feel?</h2>
             <div className="choices-wrapper">
-                <button className="motivated" onClick={handleMotivated}>motivirano</button>
-                <button className="happy" onClick={handleHappy}>sretno</button>
-                <button className="sad" onClick={handleSad}>tužno</button>
-                <button className="calm" onClick={handleCalm}>opušteno</button>
+                <button onClick={() => handleMoodChange("Motivated")}>Motivated</button>
+                <button onClick={() => handleMoodChange("Happy")}>Happy</button>
+                <button onClick={() => handleMoodChange("Sad")}>Sad</button>
+                <button onClick={() => handleMoodChange("Calm")}>Calm</button>
             </div>
         </div>
-    )
+    );
 }
 
 export default WannaFeel;

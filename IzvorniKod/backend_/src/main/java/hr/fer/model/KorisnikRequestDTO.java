@@ -7,7 +7,7 @@ public class KorisnikRequestDTO {
 	private StanjePrije stanjePrije;    
 	private StanjeZeljeno stanjeZeljeno;    
     
-	public enum Spol {muško,žensko,ostalo};    
+	public enum Spol {musko,zensko,ostalo};    
     public enum StanjePrije {tuzan,sretan,motiviran,smiren,drugo};    
     public enum StanjeZeljeno {tuzan,sretan,motiviran,smiren}
     

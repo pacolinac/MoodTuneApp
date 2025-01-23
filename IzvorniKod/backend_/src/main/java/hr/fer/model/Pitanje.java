@@ -13,10 +13,5 @@ public class Pitanje {
     private Integer pitanjeId;
 
     private String tekst;
-
-
-    public String setTekst(String text) {
-        return tekst;
-    }
     
 }

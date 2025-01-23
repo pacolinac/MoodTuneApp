@@ -6,7 +6,7 @@ public class PjesmaRequestDTO {
     private String autor;
     private String zanr;
     private String url;
-    private Emocija emocija;
+    private String emocija;
     
 	public String getNaslov() {
 		return this.naslov;
@@ -40,11 +40,11 @@ public class PjesmaRequestDTO {
         this.zanr = zanr;
     }
 
-	public Emocija getEmocija() {
+	public String getEmocija() {
 		return this.emocija;
 	}
 	
-	public void setEmocija(Emocija emocija) { 
+	public void setEmocija(String emocija) { 
         this.emocija = emocija;
     }
 

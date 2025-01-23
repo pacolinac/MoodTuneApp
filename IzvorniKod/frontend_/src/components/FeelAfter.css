@@ -1,0 +1,81 @@
+.scale-wrapper {
+    margin-top: 20px;
+}
+
+.scale-question {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.scale-options {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.scale-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+    .scale-label input[type="radio"] {
+        appearance: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid #4a4a4a;
+        background-color: white;
+        margin-bottom: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+        .scale-label input[type="radio"]:checked {
+            background-color: #4a90e2;
+            border-color: #4a90e2;
+        }
+
+        .scale-label input[type="radio"]:hover {
+            background-color: #ddd;
+        }
+
+.scale-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Color Mosaic Styles */
+.color-mosaic {
+    margin-top: 30px;
+}
+
+.color-question {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.color-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+    .color-box:hover {
+        border: 2px solid #333;
+    }

@@ -40,6 +40,7 @@ public class AdminController {
     // Šalji pitanja
     @PostMapping("/questions")
     public void createQuestion(@RequestBody PitanjeRequestDTO questionRequest) {
+    	System.out.println(questionRequest.getTekst());
         questionService.createPitanje(questionRequest);
     }
 
