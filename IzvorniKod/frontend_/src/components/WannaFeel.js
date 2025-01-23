@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Wannafeel.css";
+import "./WannaFeel.css";
 
 function WannaFeel({ user, setUser }) {
     const [selectedMood, setSelectedMood] = useState(null);
