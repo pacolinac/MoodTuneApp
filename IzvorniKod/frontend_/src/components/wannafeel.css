@@ -1,12 +1,9 @@
-
+.question-wanna {
+    font-size: 30px;
+}
 .wrapper {
     display: flex;
     flex-direction: column;
-}
-
-.question {
-    font-family: Kreon;
-    font-size: 2.2vw;
 }
 
 .choices-wrapper {
@@ -19,13 +16,28 @@
     margin: 0 auto;
 }
 
+@media (max-width: 600px) { 
+    .choices-wrapper {
+        grid-template-columns: 1fr; /* Single column */
+        grid-template-rows: auto auto auto auto; /* 4 rows */
+        gap: 10px; 
+    }
+    .choices-wrapper > button {
+        font-size: 20px;
+    }
+    .question-wanna {
+        font-size: 20px;
+    }
+
+}
+
 .choices-wrapper > button {
     padding: 7%;
     margin: 5%;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 10px;
-    font-size: 1.7vw;
+    font-size: 25px;
     font-family: Kreon;
     border: none;
     cursor: pointer;
@@ -37,6 +49,10 @@
     
     opacity: 70%;
 }
+
+.choices-wrapper button:focus {
+    border: 3px solid black;
+  }
 
 .happy {
     background: #D8C652;

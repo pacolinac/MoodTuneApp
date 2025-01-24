@@ -30,8 +30,17 @@
     text-decoration: none;
 }
 
+
+@media (max-width: 600px) { 
+    .title-form {
+        letter-spacing: -2px;
+        font-size: 25px;
+    }
+
+}
+
 .main {
-    margin-top: 100px;
+    margin-top: 60px;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -39,8 +48,9 @@
 .next-form {
     display: flex;
     align-items: center;
-    margin-top: 12%;
+    margin-top: 5%;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .backward {
@@ -75,7 +85,7 @@
     font-weight: 500;
     width: fit-content;
     text-align: end;
-    font-size: 1.7vw;
+    font-size: 2vw;
 
 }
 
@@ -98,5 +108,5 @@
     margin-right: 10%;
     width: 200px;
     text-align: end;
-    font-size: 1.7vw;
+    font-size: 2vw;
 }

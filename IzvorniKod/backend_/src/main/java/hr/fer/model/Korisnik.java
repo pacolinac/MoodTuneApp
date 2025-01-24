@@ -23,7 +23,7 @@ public class Korisnik {
     @Enumerated(EnumType.STRING)
 	private StanjeZeljeno stanjeZeljeno;
     
-    public enum Spol {muško,žensko,ostalo};
+    public enum Spol {musko,zensko,ostalo};
     
     public enum StanjePrije {tuzan,sretan,motiviran,smiren};
     

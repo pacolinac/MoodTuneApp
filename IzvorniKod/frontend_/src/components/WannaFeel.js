@@ -1,51 +1,48 @@
 import "./wannafeel.css"
 
-
 function WannaFeel({formData, setFormData, page, setPage}) {
 
-    function handleMotivated() {
+
+    function handleMotivatedW() {
         setFormData(prevFormData => ({
             ...prevFormData,
-            wannaFeel: "motivirano"
+            stanjeZeljeno: "motiviran"
         }))
         setPage(prevPage => prevPage + 1)
         
     }
-    function handleHappy() {
+    function handleHappyW() {
         setFormData(prevFormData => ({
             ...prevFormData,
-            wannaFeel: "sretno"
+            stanjeZeljeno: "sretan"
         }))
         setPage(prevPage => prevPage + 1)
     }
-    function handleSad() {
+    function handleSadW() {
         setFormData(prevFormData => ({
             ...prevFormData,
-            wannaFeel: "tuzno"
+            stanjeZeljeno: "tuzan"
         }))
         setPage(prevPage => prevPage + 1)
     }
-    function handleCalm() {
+    function handleCalmW() {
         setFormData(prevFormData => ({
             ...prevFormData,
-            wannaFeel: "opusteno"
+            stanjeZeljeno: "smiren"
         }))
         setPage(prevPage => prevPage + 1)
     }
-
-    console.log(formData)
-
     
 
     return(
         <div className="wrapper">
-            <h2 className="question">2. Kako bi se željeli osjećati?</h2>
+            <h2 className="question-wanna">2. Kako bi se željeli osjećati?</h2>
 
             <div className="choices-wrapper">
-                <button className="motivated" onClick={handleMotivated}>motivirano</button>
-                <button className="happy" onClick={handleHappy}>sretno</button>
-                <button className="sad" onClick={handleSad}>tužno</button>
-                <button className="calm" onClick={handleCalm}>opušteno</button>
+                <button className="motivated" onClick={handleMotivatedW}>motivirano</button>
+                <button className="happy" onClick={handleHappyW}>sretno</button>
+                <button className="sad" onClick={handleSadW}>tužno</button>
+                <button className="calm" onClick={handleCalmW}>opušteno</button>
             </div>
         </div>
     )
