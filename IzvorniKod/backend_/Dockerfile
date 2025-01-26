@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN mvn -f C:\Users\Patrick Mraz\Desktop\Mood_tune\MoodTuneApp\IzvorniKod\backend_\pom.xml clean install -DskipTests
+RUN mvn -f /app/IzvorniKod/backend_/pom.xml clean install -DskipTests
 
 EXPOSE 8080
 
