@@ -8,7 +8,7 @@ RUN ls -l /app
 
 RUN mvn -f /app/IzvorniKod/backend_/pom.xml clean install -DskipTests
 
-RUN ls -l /app/target
+RUN ls -l /app/IzvorniKod/backend_
 
 EXPOSE 8080
 
