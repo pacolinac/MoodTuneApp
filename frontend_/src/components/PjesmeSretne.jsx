@@ -3,7 +3,6 @@ import pozadina from "../assets/pozadina.png";
 import "./PjesmeSretne.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import bazaPodataka from "./laznabazapjesama.json";
 
 function PjesmeSretne() {
   const [sretnePjesme, setSretnePjesme] = useState([]);
@@ -12,14 +11,6 @@ function PjesmeSretne() {
   // stanje za pohranu poruke o grešci prilikom brisanja pjesme
   const [error, setError] = React.useState("");
 
-  useEffect(() => {
-    const filtriranePjesme = bazaPodataka.pjesme.filter(
-      (pjesma) => pjesma.emocija === "sretan"
-    );
-    setSretnePjesme(filtriranePjesme);
-  }, []);
-
-  /*
   useEffect(() => {
     async function fetchPjesme() {
       try {
@@ -35,7 +26,6 @@ function PjesmeSretne() {
     }
     fetchPjesme();
   }, []);
-  */
 
   // funkcija za brisanje pjesme
   async function onDelete(id) {

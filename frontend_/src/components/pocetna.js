@@ -12,8 +12,6 @@ function Pocetna({ jeUlogiran }) {
         targetRef.current.scrollIntoView({behavior: 'smooth'})
     }
 
-    jeUlogiran = true; // ovo je za kontrolu logina
-
     return (
         <div className="container">
 

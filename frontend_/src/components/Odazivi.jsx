@@ -3,17 +3,11 @@ import pozadina from "../assets/pozadina.png";
 import "./Odazivi.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import bazaPodataka from "./laznabazaodaziva.json";
 
 function Odazivi() {
   const [odazivi, setOdazivi] = useState([]);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    setOdazivi(bazaPodataka.odazivi);
-  }, []);
-
-  /*
   useEffect(() => {
     async function fetchOdazive() {
       try {
@@ -25,7 +19,6 @@ function Odazivi() {
     }
     fetchOdazive();
   }, []);
-  */
 
   return (
     <div>
