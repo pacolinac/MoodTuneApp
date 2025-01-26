@@ -106,7 +106,7 @@ function DodajPjesmu() {
                 value={songForm.emocija}
                 onChange={onChange}
               >
-                <option value="" selected disabled hidden>
+                <option value="" disabled hidden>
                   --odaberite emociju--
                 </option>
                 <option value="tuzan">tužna</option>
@@ -119,6 +119,7 @@ function DodajPjesmu() {
             <div className="songinput">
               <input
                 name="url"
+                type="url"
                 placeholder="URL"
                 value={songForm.url}
                 onChange={onChange}
