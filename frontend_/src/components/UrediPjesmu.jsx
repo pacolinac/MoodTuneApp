@@ -7,6 +7,7 @@ import "./UrediPjesmu.css";
 function UrediPjesmu() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [editForm, setEditForm] = useState({
     autor: "",
@@ -16,8 +17,8 @@ function UrediPjesmu() {
     url: "",
   });
 
-  // U useState inicijalizacija
-  const location = useLocation();
+  // stanje za pohranu poruke o grešci prilikom uredivanja pjesme
+  const [error, setError] = React.useState("");
 
   // useEffect za postavljanje stanja forme na temelju proslijeđenih podataka
   useEffect(() => {
@@ -62,7 +63,7 @@ function UrediPjesmu() {
       await axios.put(`/api/admin/songs/${id}`, data);
       navigate("/admin");
     } catch (error) {
-      console.error("Greška prilikom ažuriranja pjesme:", error);
+      setError("Greška prilikom uređivanja pjesme!");
     }
   }
 
@@ -130,6 +131,7 @@ function UrediPjesmu() {
             </button>
           </div>
         </form>
+        {error && <p className="error">{error}</p>}
       </div>
     </div>
   );

@@ -9,6 +9,9 @@ function PjesmeMotivacijske() {
   const [motivacijskePjesme, setMotivacijskePjesme] = useState([]);
   const navigate = useNavigate();
 
+  // stanje za pohranu poruke o grešci prilikom brisanja pjesme
+  const [error, setError] = React.useState("");
+
   useEffect(() => {
     const filtriranePjesme = bazaPodataka.pjesme.filter(
       (pjesma) => pjesma.emocija === "motiviran"
@@ -35,14 +38,14 @@ function PjesmeMotivacijske() {
   */
 
   // funkcija za brisanje pjesme
-  async function handleDelete(id) {
+  async function onDelete(id) {
     try {
       await axios.delete(`/api/admin/songs/${id}`);
       setMotivacijskePjesme((oldPjesme) =>
         oldPjesme.filter((pjesma) => pjesma.pjesmaId !== id)
       );
     } catch (error) {
-      console.error("Greška prilikom brisanja pjesme:", error);
+      setError("Greška prilikom brisanja pjesme!");
     }
   }
 
@@ -68,7 +71,7 @@ function PjesmeMotivacijske() {
             </p>
             <button
               className="deletebutton"
-              onClick={() => handleDelete(pjesma.pjesmaId)}
+              onClick={() => onDelete(pjesma.pjesmaId)}
             >
               Izbriši
             </button>
@@ -84,6 +87,7 @@ function PjesmeMotivacijske() {
             </button>
           </div>
         ))}
+        {error && <p className="error">{error}</p>}
       </div>
     </div>
   );

@@ -105,6 +105,10 @@
 
 @media (max-width: 768px) {
 
+  .admindalje {
+    max-width: 300px;
+  }
+
   .logoutbutton {
     font-size: 14px;
     padding: 10px 20px;
@@ -137,6 +141,10 @@
 }
 
 @media (max-width: 480px) {
+
+  .admindalje {
+    max-width: 250px;
+  }
 
   .logic {
     padding-left: 5px;

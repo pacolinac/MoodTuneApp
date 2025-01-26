@@ -9,7 +9,7 @@
 
     "pjesme": [
         {
-            "id": "1",
+            "pjesmaId": "1",
             "autor": "ja1",
             "naslov": "ja2",
             "zanr": "ja3",
@@ -17,7 +17,7 @@
             "url": "https://www.youtube.com/watch?v=Jllu94-8PxI"
         },        
         {
-            "id": "2",
+            "pjesmaId": "2",
             "autor": "on1",
             "naslov": "on2",
             "zanr": "on3",
@@ -25,7 +25,7 @@
             "url": "https://www.youtube.com/watch?v=ZbZSe6N_BXs"
         },        
         {
-            "id": "3",
+            "pjesmaId": "3",
             "autor": "ona1",
             "naslov": "ona2",
             "zanr": "ona3",
@@ -33,7 +33,7 @@
             "url": "https://www.youtube.com/watch?v=FKXSh14svlQ"
         },        
         {
-            "id": "4",
+            "pjesmaId": "4",
             "autor": "ono1",
             "naslov": "ono2",
             "zanr": "ono3",
