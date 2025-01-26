@@ -1,0 +1,11 @@
+.songcardtuz {
+  background: linear-gradient(to right, #2F5C95, #74a5e6);
+  color: #fff;
+  width: 65%;
+  max-width: 500px;
+  padding: 15px;
+  padding-top: 0px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}

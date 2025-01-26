@@ -84,11 +84,17 @@ function UrediPjesmu() {
           <div className="songinputs">
             <p>Autor:</p>
             <div className="songinput">
-              <input name="autor" value={editForm.autor} onChange={onChange} />
+              <input
+                placeholder="Autor"
+                name="autor"
+                value={editForm.autor}
+                onChange={onChange}
+              />
             </div>
             <p>Naslov:</p>
             <div className="songinput">
               <input
+                placeholder="Naslov"
                 name="naslov"
                 value={editForm.naslov}
                 onChange={onChange}
@@ -96,7 +102,12 @@ function UrediPjesmu() {
             </div>
             <p>Žanr:</p>
             <div className="songinput">
-              <input name="zanr" value={editForm.zanr} onChange={onChange} />
+              <input
+                placeholder="Žanr"
+                name="zanr"
+                value={editForm.zanr}
+                onChange={onChange}
+              />
             </div>
             <div className="songinputselect">
               <p>Emocija pjesme:</p>
@@ -118,6 +129,7 @@ function UrediPjesmu() {
             <p>URL:</p>
             <div className="songinput">
               <input
+                placeholder="URL"
                 name="url"
                 type="url"
                 value={editForm.url}

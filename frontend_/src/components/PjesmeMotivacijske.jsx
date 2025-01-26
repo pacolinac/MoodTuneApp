@@ -85,9 +85,9 @@ function PjesmeMotivacijske() {
             >
               Uredi
             </button>
+            {error && <p className="error">{error}</p>}
           </div>
         ))}
-        {error && <p className="error">{error}</p>}
       </div>
     </div>
   );
