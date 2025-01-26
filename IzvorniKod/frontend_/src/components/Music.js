@@ -20,7 +20,7 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
     useEffect(() => {
         const fetchSong = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/api/songs?mood=${formData.stanjeZeljeno}`);
+                const response = await fetch(`/api/songs?mood=${formData.stanjeZeljeno}`);
                 const data = await response.json();
                 console.log(data);
                 setMusicData(data); 

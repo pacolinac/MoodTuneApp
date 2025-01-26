@@ -94,13 +94,13 @@ function Form() {
 
         try {
             console.log("OdazivPreListening_:" + odazivPreListening_);
-            await axios.post("http://localhost:8080/api/responses", odazivPreListening_, {
+            await axios.post("/api/responses", odazivPreListening_, {
                 headers: {
                     "Content-Type": "application/json",
                 },
             });
             console.log("OdazivPostListening_:" + odazivPostListening_);
-            await axios.post("http://localhost:8080/api/responses", odazivPostListening_, {
+            await axios.post("/api/responses", odazivPostListening_, {
                 headers: {
                     "Content-Type": "application/json",
                 },
@@ -130,7 +130,7 @@ function Form() {
             console.log("OdazivPostListening:", JSON.stringify(odazivPostListening, null, 2)); 
             console.log("OdazivPreListening:", JSON.stringify(odazivPreListening, null, 2));   
 
-            const response = await axios.post('http://localhost:8080/api/users', user_);
+            const response = await axios.post('/api/users', user_);
             console.log("User_ response data:", response.data); 
 
             sendOdaziv(response.data.korisnikId);
