@@ -12,17 +12,17 @@ function Admin(props) {
         <Link to={"/"} className="logic">
           <header>MoodTune</header>
         </Link>
-        <button
-          className="logoutbutton"
-          type="button"
-          onClick={() =>
-            navigate("/") &&
-            props.setJeUlogiran(false) &&
-            (props.jeUlogiran = false)
-          }
-        >
-          Odjavi se
-        </button>
+              <button
+                  className="logoutbutton"
+                  type="button"
+                  onClick={() => {
+                      props.onLogout();
+                      navigate("/");
+                  }}
+              >
+                  Odjavi se
+              </button>
+
       </div>
       <p className="tekstic1">Pozdrav admine! :D</p>
       <div className="admindalje">

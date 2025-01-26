@@ -40,24 +40,25 @@ function Form() {
 
 
     const [page, setPage] = useState(0);
-    const formTitles = ["Privole", "PersonalInfo","FeelBefore", "WannaFeel", "Music", "FeelAfter"]
+    const formTitles = ["Privole", "PersonalInfo", "FeelBefore", "WannaFeel", "Music", "FeelAfter"]
+    const [isMusicCompleted, setIsMusicCompleted] = useState(false); 
 
     const PageDisplay = () => {
         if(page === 0) {
             return <Privole/>
         }
         if(page === 1) {
-            return <PersonalInfo formData={formData} setFormData={setFormData} />
+            return <PersonalInfo setFormData={setFormData} />
         }
         if(page === 2) {
-            return <FeelBefore formData={formData} setFormData={setFormData} page={page} setPage={setPage} odazivPreListening= {odazivPreListening} setOdazivPrev={setOdazivPrev}/>
+            return <FeelBefore setFormData={setFormData} setOdazivPrev={setOdazivPrev}/>
         }
 
         if(page === 3) {
             return <WannaFeel formData={formData} setFormData={setFormData} page={page} setPage={setPage}/>
         }
         if(page === 4) {
-            return <Music formData={formData} setFormData={setFormData} odazivPostListening={odazivPostListening}  setOdazivPost={setOdazivPost}/>
+            return <Music formData={formData} setFormData={setFormData} odazivPostListening={odazivPostListening} setOdazivPost={setOdazivPost} setIsMusicCompleted={setIsMusicCompleted} />
         }
         if (page === 5) {
             return <FeelAfter formData={formData} setFormData={setFormData} odazivPostListening={odazivPostListening}  setOdazivPost={setOdazivPost}/>
@@ -175,6 +176,40 @@ function Form() {
                             console.log("odazivPreListening:", JSON.stringify(odazivPreListening, null, 2));
                             console.log("odazivPostListening:", JSON.stringify(odazivPostListening, null, 2));
                             console.log("formData:", JSON.stringify(formData, null, 2));
+
+                            if (page === 1) {
+                                if (!formData.dob || !formData.spol) {
+                                    alert("Nevaljani podaci! Molimo unesite godine i odaberite spol.");
+                                    return;
+                                }
+                            }
+
+                            if (page === 2) {
+                                if (!formData.stanjePrije || !odazivPreListening.odgovorId) {
+                                    alert("Emocija i odgovor moraju biti ispunjeni!");
+                                    return;
+                                }
+                            }
+
+                            if (page === 4 && !isMusicCompleted) {
+                                alert("Morate poslušati pjesmu do kraja prije nego nastavite.");
+                                return;
+                            }
+
+                            if (page === 5) {
+                                if (!odazivPostListening.odgovorId || !odazivPostListening.pitanjeId) {
+                                    alert("Emocija i odgovor moraju biti ispunjeni!");
+                                    return;
+                                }
+                            }
+
+                            if (page === 6) {
+                                if (!odazivPostListening.boja) {
+                                    alert("Boja mora biti odabrana!");
+                                    return;
+                                }
+                            }
+
                             if (page === formTitles.length) {
                                 handleSubmit()
                                 setPage((curPage) => curPage + 1)

@@ -101,12 +101,18 @@
     background: linear-gradient(to right, lightblue, orange);
 }
 
+.prijava:disabled {
+    background: silver;
+    cursor: not-allowed;
+}
+
 
 .error {
     color: red;
     font-weight: 500;
     margin: auto;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     width: 100%;
     justify-content: center;
     align-items: center;

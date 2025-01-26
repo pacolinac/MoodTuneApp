@@ -1,9 +1,9 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
 import "./music.css";
 
-function Music({ formData, setFormData, odazivPostListening, setOdazivPost }) {
+function Music({ formData, setFormData, odazivPostListening, setOdazivPost, setIsMusicCompleted }) {
     const currentAudio = useRef();
-    const [musicData, setMusicData] = useState(null); // Use state for musicData
+    const [musicData, setMusicData] = useState(null); 
     const [isAudioPlaying, setIsAudioPlaying] = useState(false);
     const [audioProgress, setAudioProgress] = useState(0);
 
@@ -53,6 +53,10 @@ function Music({ formData, setFormData, odazivPostListening, setOdazivPost }) {
         currentAudio.current.currentTime = (e.target.value * currentAudio.current.duration) / 100;
     };
 
+    const handleAudioEnded = () => {
+        setIsMusicCompleted(true); 
+    };
+
     const style = {
         backgroundColor:
             formData.stanjeZeljeno === "tuzan" ? "rgba(47, 92, 149, 0.8)" : // Blue with 50% opacity
@@ -66,13 +70,13 @@ function Music({ formData, setFormData, odazivPostListening, setOdazivPost }) {
         <div className='containerM'>
             <h2>Stisnite Play i poslušajte vašu pjesmu</h2>
 
-            {/* Only render audio and song info when musicData is available */}
             {musicData ? (
                 <>
                     <audio
-                        src={musicData.url} // Update with correct property for song URL
+                        src={musicData.url} 
                         ref={currentAudio}
                         onTimeUpdate={handleAudioUpdate}
+                        onEnded={handleAudioEnded}
                     ></audio>
 
                     <p>{musicData.naslov} - {musicData.autor}</p>

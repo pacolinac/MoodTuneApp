@@ -1,7 +1,7 @@
 import "./feelbefore.css"
 import {useState} from 'react'
 
-function FeelBefore({formData, setFormData,page, setPage, odazivPreListening, setOdazivPrev}) {
+function FeelBefore({ setFormData, setOdazivPrev}) {
 
     const [value, setValue] = useState(0);
 
