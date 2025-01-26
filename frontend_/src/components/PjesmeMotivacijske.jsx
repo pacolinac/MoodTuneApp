@@ -24,13 +24,13 @@ function PjesmeMotivacijske() {
     async function fetchPjesme() {
       try {
         const response = await axios.get("/api/admin/songs");
-        const pjesme = response.data.pjesme;
+        const pjesme = response.data;
         const filtriranePjesme = pjesme.filter(
           (pjesma) => pjesma.emocija.emocija === "motiviran"
         );
         setMotivacijskePjesme(filtriranePjesme);
       } catch (error) {
-        console.error("Greška pri dohvaćanju podataka:", error);
+        setError("Greška pri dohvaćanju podataka!");
       }
     }
     fetchPjesme();

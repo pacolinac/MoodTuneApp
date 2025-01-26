@@ -1,0 +1,27 @@
+
+.responselist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.responsecard {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.responsecard p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.responsecard p span {
+    font-weight: bold;
+  }

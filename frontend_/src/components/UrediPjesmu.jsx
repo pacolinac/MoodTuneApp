@@ -17,7 +17,7 @@ function UrediPjesmu() {
     url: "",
   });
 
-  // stanje za pohranu poruke o grešci prilikom uredivanja pjesme
+  // stanje za pohranu poruke o grešci prilikom uređivanja pjesme
   const [error, setError] = React.useState("");
 
   // useEffect za postavljanje stanja forme na temelju proslijeđenih podataka
