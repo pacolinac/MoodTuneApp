@@ -4,9 +4,11 @@ WORKDIR /app
 
 COPY . .
 
-RUN ls -l /app/target
+RUN ls -l /app
 
 RUN mvn -f /app/IzvorniKod/backend_/pom.xml clean install -DskipTests
+
+RUN ls -l /app/target
 
 EXPOSE 8080
 
