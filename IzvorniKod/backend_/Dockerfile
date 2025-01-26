@@ -1,17 +1,11 @@
-# Use a Maven image with OpenJDK 11
-FROM maven:3.8.4-openjdk-11
+FROM maven:3.8.1-openjdk-17 as build
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy all project files into the container
-COPY . /app
+COPY . .
 
-# Run the Maven build command
-RUN mvn clean install
+RUN mvn clean install -DskipTests
 
-# Expose the necessary port (for a Spring Boot application, typically 8080)
 EXPOSE 8080
 
-# Run the app with the generated jar file
-CMD ["java", "-jar", "target/your-app.jar"]
+CMD ["java", "-jar", "target/survey-app-0.0.1-SNAPSHOT.jar"]
