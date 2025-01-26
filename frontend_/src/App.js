@@ -12,6 +12,7 @@ import PjesmeOpustajuce from "./components/PjesmeOpustajuce.jsx";
 import PjesmeMotivacijske from "./components/PjesmeMotivacijske.jsx";
 import PjesmeSretne from "./components/PjesmeSretne.jsx";
 import PjesmeTuzne from "./components/PjesmeTuzne.jsx";
+import UrediPjesmu from "./components/UrediPjesmu.jsx"
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           <Route path="/admin/pjesme/sretne" exact Component={PjesmeSretne}></Route>
           <Route path="/admin/pjesme/tuzne" exact Component={PjesmeTuzne}></Route>
           <Route path="/admin/dodajPjesmu" exact Component={DodajPjesmu}></Route>
+          <Route path="/admin/urediPjesmu/:id" exact Component={UrediPjesmu}></Route>
         </Routes>
       </BrowserRouter>
     </div>

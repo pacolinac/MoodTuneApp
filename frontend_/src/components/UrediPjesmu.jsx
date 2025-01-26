@@ -1,14 +1,14 @@
-import React from "react";
-import pozadina from "../assets/pozadina.png";
-import "./DodajPjesmu.css";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
+import pozadina from "../assets/pozadina.png";
+import "./UrediPjesmu.css";
 
-function DodajPjesmu() {
+function UrediPjesmu() {
+  const { id } = useParams();
   const navigate = useNavigate();
 
-  const [songForm, setSongForm] = React.useState({
+  const [editForm, setEditForm] = useState({
     autor: "",
     naslov: "",
     zanr: "",
@@ -16,12 +16,25 @@ function DodajPjesmu() {
     url: "",
   });
 
-  // stanje za pohranu poruke o grešci prilikom dodavanja pjesme
-  const [error, setError] = React.useState("");
+  // U useState inicijalizacija
+  const location = useLocation();
 
-  // provjera je li forma za dodavanje pjesme ispravna
+  // useEffect za postavljanje stanja forme na temelju proslijeđenih podataka
+  useEffect(() => {
+    if (location.state && location.state.pjesma) {
+      const { pjesma } = location.state;
+      setEditForm({
+        autor: pjesma.autor,
+        naslov: pjesma.naslov,
+        zanr: pjesma.zanr,
+        emocija: pjesma.emocija,
+        url: pjesma.url,
+      });
+    }
+  }, [location.state]);
+
   function isValid() {
-    const { autor, naslov, zanr, emocija, url } = songForm;
+    const { autor, naslov, zanr, emocija, url } = editForm;
     return (
       autor.length > 0 &&
       naslov.length > 0 &&
@@ -33,26 +46,23 @@ function DodajPjesmu() {
 
   function onChange(event) {
     const { name, value } = event.target;
-    setSongForm((oldForm) => ({ ...oldForm, [name]: value }));
+    setEditForm((oldForm) => ({ ...oldForm, [name]: value }));
   }
 
   async function onSubmit(e) {
     e.preventDefault();
-    setError("");
-
     const data = {
-      autor: songForm.autor,
-      naslov: songForm.naslov,
-      zanr: songForm.zanr,
-      emocija: songForm.emocija,
-      url: songForm.url,
+      autor: editForm.autor,
+      naslov: editForm.naslov,
+      zanr: editForm.zanr,
+      emocija: editForm.emocija,
+      url: editForm.url,
     };
-
     try {
-      await axios.post("/api/admin/songs", data);
+      await axios.put(`/api/admin/songs/${id}`, data);
       navigate("/admin");
     } catch (error) {
-      setError("Greška prilikom dodavanja pjesme!");
+      console.error("Greška prilikom ažuriranja pjesme:", error);
     }
   }
 
@@ -67,43 +77,32 @@ function DodajPjesmu() {
       <div className="songbox">
         <form onSubmit={onSubmit}>
           <div className="songgore">
-            <div className="songtekst">Dodaj pjesmu:</div>
+            <div className="songtekst">Uredi pjesmu:</div>
             <div className="songunderline"></div>
           </div>
           <div className="songinputs">
             <p>Autor:</p>
             <div className="songinput">
-              <input
-                name="autor"
-                placeholder="Autor"
-                value={songForm.autor}
-                onChange={onChange}
-              />
+              <input name="autor" value={editForm.autor} onChange={onChange} />
             </div>
             <p>Naslov:</p>
             <div className="songinput">
               <input
                 name="naslov"
-                placeholder="Naslov"
-                value={songForm.naslov}
+                value={editForm.naslov}
                 onChange={onChange}
               />
             </div>
             <p>Žanr:</p>
             <div className="songinput">
-              <input
-                name="zanr"
-                placeholder="Žanr"
-                value={songForm.zanr}
-                onChange={onChange}
-              />
+              <input name="zanr" value={editForm.zanr} onChange={onChange} />
             </div>
             <div className="songinputselect">
               <p>Emocija pjesme:</p>
               <select
                 className="emotions"
                 name="emocija"
-                value={songForm.emocija}
+                value={editForm.emocija}
                 onChange={onChange}
               >
                 <option value="" disabled hidden>
@@ -120,22 +119,20 @@ function DodajPjesmu() {
               <input
                 name="url"
                 type="url"
-                placeholder="URL"
-                value={songForm.url}
+                value={editForm.url}
                 onChange={onChange}
               />
             </div>
           </div>
           <div className="songsubmit">
-            <button className="songadd" type="submit" disabled={!isValid()}>
-              Dodaj pjesmu
+            <button className="songedit" type="submit" disabled={!isValid()}>
+              Ažuriraj podatke
             </button>
           </div>
         </form>
-        {error && <p className="error">{error}</p>}
       </div>
     </div>
   );
 }
 
-export default DodajPjesmu;
+export default UrediPjesmu;

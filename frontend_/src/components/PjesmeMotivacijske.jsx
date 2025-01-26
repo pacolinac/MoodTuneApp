@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import pozadina from "../assets/pozadina.png";
 import "./PjesmeMotivacijske.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import bazaPodataka from "./laznabazapjesama.json";
 
 function PjesmeMotivacijske() {
   const [motivacijskePjesme, setMotivacijskePjesme] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const filtriranePjesme = bazaPodataka.pjesme.filter(
@@ -70,6 +71,16 @@ function PjesmeMotivacijske() {
               onClick={() => handleDelete(pjesma.pjesmaId)}
             >
               Izbriši
+            </button>
+            <button
+              className="editbutton"
+              onClick={() =>
+                navigate(`/admin/urediPjesmu/${pjesma.pjesmaId}`, {
+                  state: { pjesma },
+                })
+              }
+            >
+              Uredi
             </button>
           </div>
         ))}
