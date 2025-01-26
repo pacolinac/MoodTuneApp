@@ -4,12 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN ls -l /app
-
 RUN mvn -f /app/IzvorniKod/backend_/pom.xml clean install -DskipTests
-
-RUN ls -l /app/IzvorniKod/backend_
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "target/survey-app-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/app/IzvorniKod/backend_/target/survey-app-0.0.1-SNAPSHOT.jar"]
