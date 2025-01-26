@@ -1,6 +1,6 @@
 import "./boje.css"
 
-function Boje({odazivPostListening, setOdazivPost}) {
+function Boje({ setOdazivPost}) {
 
 
     function handleColor(event) {

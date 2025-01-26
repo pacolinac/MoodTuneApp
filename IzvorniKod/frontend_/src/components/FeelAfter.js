@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import './feelafter.css'
 
-function FeelAfter({formData, setFormData, odazivPostListening, setOdazivPost}) {
+function FeelAfter({setOdazivPost}) {
 
     const [value, setValue] = useState(0);
 

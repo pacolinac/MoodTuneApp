@@ -1,7 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
 import "./music.css";
 
-function Music({ formData, setFormData, odazivPostListening, setOdazivPost, setIsMusicCompleted }) {
+function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
     const currentAudio = useRef();
     const [musicData, setMusicData] = useState(null); 
     const [isAudioPlaying, setIsAudioPlaying] = useState(false);

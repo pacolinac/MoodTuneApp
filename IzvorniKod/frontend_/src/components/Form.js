@@ -48,23 +48,23 @@ function Form() {
             return <Privole/>
         }
         if(page === 1) {
-            return <PersonalInfo setFormData={setFormData} />
+            return <PersonalInfo setFormData={setFormData} formData={formData} />
         }
         if(page === 2) {
             return <FeelBefore setFormData={setFormData} setOdazivPrev={setOdazivPrev}/>
         }
 
         if(page === 3) {
-            return <WannaFeel formData={formData} setFormData={setFormData} page={page} setPage={setPage}/>
+            return <WannaFeel setFormData={setFormData} setPage={setPage}/>
         }
         if(page === 4) {
-            return <Music formData={formData} setFormData={setFormData} odazivPostListening={odazivPostListening} setOdazivPost={setOdazivPost} setIsMusicCompleted={setIsMusicCompleted} />
+            return <Music formData={formData} setOdazivPost={setOdazivPost} setIsMusicCompleted={setIsMusicCompleted} />
         }
         if (page === 5) {
-            return <FeelAfter formData={formData} setFormData={setFormData} odazivPostListening={odazivPostListening}  setOdazivPost={setOdazivPost}/>
+            return <FeelAfter setOdazivPost={setOdazivPost}/>
         }
         if(page === 6) {
-            return <Boje odazivPostListening={odazivPostListening} setOdazivPost={setOdazivPost}/>
+            return <Boje setOdazivPost={setOdazivPost}/>
         }
         if(page === 7) {
             return <EndMessage/>
@@ -143,7 +143,7 @@ function Form() {
 
     return(
         <div className="form-container">
-            <img className="backgroundimg" src="./photos/background-upper.png"></img>
+            <img className="backgroundimg" src="./photos/background-upper.png" alt=""></img>
 
             <Link to={"/"} className="title-form">
                 <header>MoodTune</header>

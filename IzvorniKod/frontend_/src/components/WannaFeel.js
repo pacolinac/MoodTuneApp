@@ -1,6 +1,6 @@
 import "./wannafeel.css"
 
-function WannaFeel({formData, setFormData, page, setPage}) {
+function WannaFeel({ setFormData, setPage}) {
 
 
     function handleMotivatedW() {
