@@ -42,7 +42,9 @@ function Login(props) {
       try {
           const response = await axios.post("/api/admin/login", data);
 
-          if (response.status === 200) {
+          console.log(response);
+
+          if (response.data === 'Authentication successful') {
               props.onLogin();
               navigate("/admin");
           } else {

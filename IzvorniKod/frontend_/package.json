@@ -35,5 +35,8 @@
             "last 1 safari version"
         ]
     },
-    "proxy": "https://moodtuneapp.onrender.com/"
+    "proxy": "http://localhost:8080"
+
+
 }
+
