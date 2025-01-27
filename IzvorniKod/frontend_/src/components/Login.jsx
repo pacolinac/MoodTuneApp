@@ -39,20 +39,19 @@ function Login(props) {
       lozinka: loginForm.lozinka,
     };
 
-    try {
-      const response = await axios.post("/api/admin/login", data);
+      try {
+          const response = await axios.post("/api/admin/login", data);
 
-      console.log(response);
-
-      if (response.data === "Authentication successful") {
-        props.onLogin();
-        navigate("/admin");
-      } else {
-        setError("Korisničko ime ili lozinka neispravni");
+          if (response.status === 200) {
+              props.onLogin();
+              navigate("/admin");
+          } else {
+              setError("Korisničko ime ili lozinka neispravni");
+              alert("Korisničko ime ili lozinka neispravni"); 
+          }
+      } catch (error) {
+          setError("Greška prilikom prijave!");
       }
-    } catch (error) {
-      setError("Greška prilikom prijave!");
-    }
   }
 
   return (
