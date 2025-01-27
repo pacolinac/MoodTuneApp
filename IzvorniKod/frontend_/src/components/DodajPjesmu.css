@@ -44,6 +44,7 @@
 }
 
 .songinput {
+  height: 40px;
   background: #f4f4f4;
   border-radius: 6px;
   display: flex;
@@ -74,6 +75,7 @@
 }
 
 .emotions {
+  height: 40px;
   width: 100%;
   background: #f4f4f4;
   border: none;
@@ -134,7 +136,7 @@
   
   .emotions {
     font-size: 12px;
-    padding: 15px;
+    padding: 10px;
   }
 
   .songadd {
@@ -146,6 +148,10 @@
 @media (max-width: 480px) {
   .songtekst {
     font-size: 18px;
+  }
+
+  .songinput, .emotions {
+    height: 35px;
   }
 
   .songadd {

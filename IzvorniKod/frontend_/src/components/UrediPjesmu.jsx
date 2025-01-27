@@ -37,11 +37,11 @@ function UrediPjesmu() {
   function isValid() {
     const { autor, naslov, zanr, emocija, url } = editForm;
     return (
-      autor.length > 0 &&
-      naslov.length > 0 &&
-      zanr.length > 0 &&
-      emocija.length > 0 &&
-      url.length > 0
+      autor !== "" &&
+      naslov !== "" &&
+      zanr !== "" &&
+      emocija !== "" &&
+      url !== ""
     );
   }
 
