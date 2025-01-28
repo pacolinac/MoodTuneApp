@@ -10,6 +10,11 @@
   flex-direction: column;
 }
 
+.choices-wrapper button:focus {
+  border: none;
+}
+
+
 .choices-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr; 

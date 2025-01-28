@@ -134,7 +134,7 @@ function Form() {
             console.log("User_ response data:", response.data); 
 
             sendOdaziv(response.data.korisnikId);
-            alert("Survey saved!");
+            //alert("Survey saved!");
         } catch (error) {
             console.error('Error submitting data:', error);
         }

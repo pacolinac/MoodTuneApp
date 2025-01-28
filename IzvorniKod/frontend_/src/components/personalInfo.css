@@ -22,7 +22,8 @@ h2 {
     padding: 0.5rem 0.8rem;
     border: 2px solid black; 
     border-radius: 20px; 
-    width: 400px;
+    max-width: 400px;
+    width: 50vw;
     background-color: #f9f9f98d; 
     text-align: center;
     margin-bottom: 20px;

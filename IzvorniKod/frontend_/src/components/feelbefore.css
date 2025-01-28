@@ -55,6 +55,3 @@
     
     opacity: 70%;
 }
-.choices-wrapper-before button:focus {
-    border: 3px solid black;
-  }
