@@ -82,7 +82,8 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
                         ref={currentAudio}
                         onTimeUpdate={handleAudioUpdate}
                         onEnded={handleAudioEnded}
-                        preload='auto'
+                        preload='none'
+                        type="audio/mpeg"
                     ></audio>
 
                     <p>{musicData.naslov} - {musicData.autor}</p>
