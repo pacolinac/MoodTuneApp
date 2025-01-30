@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useRef, useLayoutEffect, useCallback, useEffect } from 'react';
 import "./music.css";
 
 function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
@@ -33,9 +33,17 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
         fetchSong();
     }, [formData.stanjeZeljeno, setOdaziv]);
 
+    //novi dio
+    useLayoutEffect(() => {
+        if (isAudioPlaying) {
+            currentAudio.current.play();
+        }
+
+    }, [isAudioPlaying])
+
+    //stari dio i fali u if currentAudio.current.play ako bi po starom islo
     const handleAudioPlay = () => {
         if (currentAudio.current.paused) {
-            currentAudio.current.play();
             setIsAudioPlaying(true);
         } else {
             currentAudio.current.pause();
