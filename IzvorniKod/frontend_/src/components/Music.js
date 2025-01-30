@@ -33,19 +33,16 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
         fetchSong();
     }, [formData.stanjeZeljeno, setOdaziv]);
 
-    // zamjena useLayoutEffect s useEffect
-    useEffect(() => {
+    const handleAudioPlay = () => {
+        setIsAudioPlaying(!isAudioPlaying);
+        
         if (currentAudio.current) {
-            if (isAudioPlaying) {
+            if (!isAudioPlaying) {
                 currentAudio.current.play();
             } else {
                 currentAudio.current.pause();
             }
         }
-    }, [isAudioPlaying]);
-
-    const handleAudioPlay = () => {
-        setIsAudioPlaying(!isAudioPlaying);
     };
 
     const handleAudioUpdate = () => {
