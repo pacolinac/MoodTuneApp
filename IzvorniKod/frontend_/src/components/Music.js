@@ -46,11 +46,7 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
 
     //stari dio i fali u if currentAudio.current.play ako bi po starom islo
     const handleAudioPlay = () => {
-        if (currentAudio.current.paused) {
-            setIsAudioPlaying(true);
-        } else {
-            setIsAudioPlaying(false);
-        }
+        setIsAudioPlaying(!isAudioPlaying)
     };
 
     const handleAudioUpdate = () => {
