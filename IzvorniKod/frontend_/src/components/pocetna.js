@@ -12,8 +12,6 @@ function Pocetna({ jeUlogiran }) {
         targetRef.current.scrollIntoView({behavior: 'smooth'})
     }
 
-    //jeUlogiran = false;
-
     return (
         <div className="container">
 

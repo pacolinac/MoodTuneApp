@@ -47,8 +47,7 @@ function Login(props) {
         props.onLogin();
         navigate("/admin");
       } else {
-        setError("Korisničko ime ili lozinka neispravni");
-        alert("Korisničko ime ili lozinka neispravni");
+        setError("Korisničko ime ili lozinka neispravni!");
       }
     } catch (error) {
       setError("Greška prilikom prijave!");

@@ -1,8 +1,8 @@
-
 .responselist {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .responsecard {
@@ -10,9 +10,9 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 15px;
+  padding-bottom: 20px;
   margin: 10px 0;
-  width: 80%;
-  max-width: 500px;
+  width: 500px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -23,5 +23,48 @@
 }
 
 .responsecard p span {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+.odazivboja {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 600px) {
+
+  .responsecard {
+    width: 400px;
   }
+}
+
+@media (max-width: 500px) {
+
+  .responsecard {
+    width: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .responsecard {
+    width: 250px;
+  }
+}
+
+@media (max-width: 350px) {
+
+  .responsecard {
+    width: 225px;
+  }
+}
+
+@media (max-width: 300px) {
+
+  .responsecard {
+    width: 200px;
+  }
+}
+

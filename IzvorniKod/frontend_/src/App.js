@@ -18,19 +18,17 @@ import NemaStranice from "./components/NemaStranice.jsx"
 
 function App() {
 
-
-
   // stanje za praćenje prijavljenosti korisnika
   const [jeUlogiran, setJeUlogiran] = React.useState(() => {
-    return localStorage.getItem("jeUlogiran") === "false";
+    return localStorage.getItem("jeUlogiran") === "true";
   });
-  
+
   // funkcija koja se poziva kada se korisnik uspješno prijavi
   function onLogin() {
     setJeUlogiran(true);
     localStorage.setItem("jeUlogiran", "true");
   }
-  
+
   // funkcija koja se poziva kada se korisnik uspješno odjavi
   function onLogout() {
     setJeUlogiran(false);
@@ -54,7 +52,7 @@ function App() {
             <Route path="/admin/pjesme/sretne" exact Component={PjesmeSretne}></Route>
             <Route path="/admin/pjesme/tuzne" exact Component={PjesmeTuzne}></Route>
             <Route path="/admin/dodajPjesmu" exact Component={DodajPjesmu}></Route>
-            <Route path="/admin/urediPjesmu/:id" exact Component={UrediPjesmu}></Route>
+            <Route path="/admin/pjesme/urediPjesmu/:id" exact Component={UrediPjesmu}></Route>
           </>
           )
           }

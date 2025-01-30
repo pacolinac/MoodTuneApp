@@ -28,7 +28,7 @@ function UrediPjesmu() {
         autor: pjesma.autor,
         naslov: pjesma.naslov,
         zanr: pjesma.zanr,
-        emocija: pjesma.emocija,
+        emocija: pjesma.emocija.emocija,
         url: pjesma.url,
       });
     }
@@ -52,6 +52,7 @@ function UrediPjesmu() {
 
   async function onSubmit(e) {
     e.preventDefault();
+    setError("");
     const data = {
       autor: editForm.autor,
       naslov: editForm.naslov,

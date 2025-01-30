@@ -9,20 +9,21 @@ function Admin(props) {
     <div className="admin">
       <img className="backgroundimg" src={pozadina} alt=""></img>
       <div className="linkheader">
-        <Link to={"/"} className="logic">
+        <Link to={"/admin"} className="logic">
           <header>MoodTune</header>
         </Link>
-              <button
-                  className="logoutbutton"
-                  type="button"
-                  onClick={() => {
-                      props.onLogout();
-                      navigate("/");
-                  }}
-              >
-                  Odjavi se
-              </button>
-
+        <button
+          className="logoutbutton"
+          type="button"
+          onClick={() => {
+            navigate("/");
+            setTimeout(() => {
+              props.onLogout();
+            }, 100);
+          }}
+        >
+          Odjavi se
+        </button>
       </div>
       <p className="tekstic1">Pozdrav admine! :D</p>
       <div className="admindalje">
