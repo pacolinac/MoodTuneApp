@@ -1,9 +1,9 @@
-import { useState, useRef, useLayoutEffect, useCallback, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import "./music.css";
 
 function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
     const currentAudio = useRef();
-    const [musicData, setMusicData] = useState(null); 
+    const [musicData, setMusicData] = useState(null);
     const [isAudioPlaying, setIsAudioPlaying] = useState(false);
     const [audioProgress, setAudioProgress] = useState(0);
 
@@ -23,8 +23,8 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
                 const response = await fetch(`/api/songs?mood=${formData.stanjeZeljeno}`);
                 const data = await response.json();
                 console.log(data);
-                setMusicData(data); 
-                setOdaziv(data); 
+                setMusicData(data);
+                setOdaziv(data);
             } catch (error) {
                 console.error('Ne mogu dohvatiti podatke o pjesmi:', error);
             }
@@ -33,20 +33,19 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
         fetchSong();
     }, [formData.stanjeZeljeno, setOdaziv]);
 
-    //novi dio
-    useLayoutEffect(() => {
-        if(currentAudio.current)
+    // zamjena useLayoutEffect s useEffect
+    useEffect(() => {
+        if (currentAudio.current) {
             if (isAudioPlaying) {
                 currentAudio.current.play();
             } else {
-                currentAudio.current.pause()
+                currentAudio.current.pause();
             }
+        }
+    }, [isAudioPlaying]);
 
-    }, [isAudioPlaying])
-
-    //stari dio i fali u if currentAudio.current.play ako bi po starom islo
     const handleAudioPlay = () => {
-        setIsAudioPlaying(!isAudioPlaying)
+        setIsAudioPlaying(!isAudioPlaying);
     };
 
     const handleAudioUpdate = () => {
@@ -60,16 +59,16 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
     };
 
     const handleAudioEnded = () => {
-        setIsMusicCompleted(true); 
+        setIsMusicCompleted(true);
     };
 
     const style = {
         backgroundColor:
-            formData.stanjeZeljeno === "tuzan" ? "rgba(47, 92, 149, 0.8)" : // Blue with 50% opacity
-                formData.stanjeZeljeno === "sretan" ? "rgba(216, 198, 82, 0.8)" : // Yellow with 50% opacity
-                    formData.stanjeZeljeno === "motiviran" ? "rgba(95, 76, 141, 0.8)" : // Purple with 50% opacity
-                        formData.stanjeZeljeno === "smiren" ? "rgba(93, 129, 76, 0.8)" : // Green with 50% opacity
-                            "rgba(255, 255, 255, 1)", // Default
+            formData.stanjeZeljeno === "tuzan" ? "rgba(47, 92, 149, 0.8)" : // Blue with 80% opacity
+            formData.stanjeZeljeno === "sretan" ? "rgba(216, 198, 82, 0.8)" : // Yellow with 80% opacity
+            formData.stanjeZeljeno === "motiviran" ? "rgba(95, 76, 141, 0.8)" : // Purple with 80% opacity
+            formData.stanjeZeljeno === "smiren" ? "rgba(93, 129, 76, 0.8)" : // Green with 80% opacity
+            "rgba(255, 255, 255, 1)", // Default
     };
 
     return (
@@ -79,7 +78,7 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
             {musicData ? (
                 <>
                     <audio
-                        src={musicData.url} 
+                        src={musicData.url}
                         ref={currentAudio}
                         onTimeUpdate={handleAudioUpdate}
                         onEnded={handleAudioEnded}
