@@ -35,9 +35,12 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
 
     //novi dio
     useLayoutEffect(() => {
-        if (isAudioPlaying) {
-            currentAudio.current.play();
-        }
+        if(currentAudio.current)
+            if (isAudioPlaying) {
+                currentAudio.current.play();
+            } else {
+                currentAudio.current.pause()
+            }
 
     }, [isAudioPlaying])
 
@@ -46,7 +49,6 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
         if (currentAudio.current.paused) {
             setIsAudioPlaying(true);
         } else {
-            currentAudio.current.pause();
             setIsAudioPlaying(false);
         }
     };
