@@ -55,8 +55,8 @@ Frontend aplikacije je modularan i može se proširivati s novim komponentama. T
 
 
 ## **Razvojni tim**
-Antonio Poleto – backend, baze podataka, testiranje
-Dorotea Požega – frontend, UI/UX, deployment
-Ema Bradić – frontend, UI/UX, dokumentacija
-Patrick Mraz – backend, baze podataka, deployment, dokumentacija, voditelj grupe
-Petra Predrijevac – frontend, UI/UX, dokumentacija
+- **Antonio Poleto** – backend, baze podataka, testiranje
+- **Dorotea Požega** – frontend, UI/UX, deployment
+- **Ema Bradić** – frontend, UI/UX, dokumentacija
+- **Patrick Mraz** – backend, baze podataka, deployment, dokumentacija, voditelj grupe
+- **Petra Predrijevac** – frontend, UI/UX, dokumentacija
