@@ -137,3 +137,17 @@
     z-index: -1;
     opacity: 90%;
 }
+
+@media (max-width: 768px) {
+    .admin-icon {
+        height: 40px;
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-icon {
+        height: 30px;
+        width: auto;
+    }
+}
