@@ -1,0 +1,86 @@
+
+.pjesme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.odabiremocije {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.emocijegumbici {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.emotivirano {
+  background: #5F4C8D;
+  color: white;
+}
+
+.esretno {
+  background: #D8C652;
+  color: black;
+}
+
+.etuzno {
+  background: #2F5C95;
+  color: white;
+}
+
+.eopusteno {
+  background: #5D814C;
+  color: white;
+}
+
+.emotivirano,
+.esretno,
+.etuzno,
+.eopusteno {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.emotivirano:hover,
+.esretno:hover,
+.etuzno:hover,
+.eopusteno:hover {
+  transform: scale(1.05);
+}
+
+.emotivirano:active,
+.esretno:active,
+.etuzno:active,
+.eopusteno:active {
+  opacity: 70%;
+}
+
+
+@media (max-width: 768px) {
+  .odabiremocije {
+    margin-top: 100px;
+    font-size: 1.8rem;
+  }
+  .emocijegumbici {
+    row-gap: 30px;
+  }
+  .emotivirano,
+  .esretno,
+  .etuzno,
+  .eopusteno {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+  }
+}

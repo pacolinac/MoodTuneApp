@@ -1,0 +1,84 @@
+.songslist {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.songcardmotiv {
+  background: linear-gradient(to right, #5F4C8D, #b0a3cf);
+  color: #fff;
+  width: 65%;
+  max-width: 500px;
+  padding: 15px;
+  padding-top: 0px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.songtitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.songauthor,
+.songgenre,
+.songlink {
+  font-size: 14px;
+  margin: 5px 0;
+  word-break: break-all;
+}
+
+.songlink a {
+  word-break: break-all;
+}
+
+
+.deletebutton {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+  
+.deletebutton:hover {
+  transform: scale(1.05);
+}
+  
+.deletebutton:active {
+  transform: scale(0.95);
+}
+
+.editbutton {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+  
+.editbutton:hover {
+  transform: scale(1.05);
+}
+  
+.editbutton:active {
+  transform: scale(0.95);
+}
+  
+  

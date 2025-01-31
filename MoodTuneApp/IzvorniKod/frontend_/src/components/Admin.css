@@ -1,0 +1,175 @@
+.admin {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.linkheader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.logic {
+  margin-top: 10px;
+  margin-right: auto;
+  padding-left: 30px;
+  font-size: 50px;
+  color: #2C2C2C;
+  font-family: Kreon;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120.811%;
+  letter-spacing: -3px;
+  text-decoration: none;
+}
+
+.logoutbutton {
+  background: linear-gradient(to right, orange, lightblue);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: min-content;
+  align-self: center;
+}
+
+.logoutbutton:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tekstic1 {
+  align-self: center;
+  padding-top: 20px;
+  font-size: 40px;
+  margin-top: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.admindalje {
+  padding: 50px;
+  padding-top: 20px;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.722);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+}
+
+.tekstovi {
+  margin-bottom: 30px;
+}
+
+.tekstic {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.gumbovi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.odazivibutton,
+.pjesmebutton,
+.korisnicibutton {
+  background: goldenrod;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+  width: 100%;
+  max-width: 200px;  
+}
+
+.odazivibutton:hover,
+.pjesmebutton:hover,
+.korisnicibutton:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+  .admindalje {
+    max-width: 300px;
+  }
+
+  .logoutbutton {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .tekstic1 {
+    font-size: 35px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  .admindalje {
+    padding: 30px;
+    max-width: 95%;
+    height: 300px;
+  }
+
+  .gumbovi {
+    flex-direction: column;
+    padding-top: 30px;
+    gap: 20px;
+  }
+
+  .odazivibutton,
+  .pjesmebutton,
+  .korisnicibutton {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .admindalje {
+    max-width: 250px;
+  }
+
+  .logic {
+    padding-left: 5px;
+    font-size: 45px;
+  }
+
+  .tekstic1 {
+    font-size: 30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .tekstic {
+    font-size: 16px;
+  }
+
+  .logoutbutton {
+    font-size: 15px;
+    padding: 8px 16px;
+  }
+
+  .odazivibutton,
+  .pjesmebutton,
+  .korisnicibutton {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+}
