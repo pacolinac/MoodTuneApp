@@ -1,71 +1,62 @@
-MoodTunes je aplikacija koja koristi snagu glazbe kako bi podržala mentalno zdravlje, prilagodila se vašem trenutnom stanju uma i poboljšala vaše raspoloženje.
+# **MoodTune - Aplikacija za praćenje emocionalnih promjena putem glazbe**
 
-MoodTunes analizira četiri ključna emocionalna stanja – smirenost, sreća, motivacija i tuga – i nudi personalizirane glazbene preporuke iz naše bogate kolekcije od 80  odabranih pjesama. Korisnici biraju kategoriju emocija, odaberu nekoliko pjesama koje slušaju, a aplikacija prati promjene u raspoloženju kroz kratke upitnike prije i poslije slušanja glazbe.
+**MoodTune** je aplikacija koja omogućava korisnicima praćenje i analizu svojih emocionalnih stanja uz pomoć glazbe. Glavni cilj aplikacije je pomoći korisnicima da bolje razumiju kako glazba utječe na njihovo raspoloženje. Na početku slušanja, korisnik označava kako se osjeća i kako bi želio da se osjeća nakon slušanja pjesme. Nakon slušanja, korisnik na semantičkom diferencijalu označava koliko mu se raspoloženje približilo željenom stanju.
 
-MoodTunes je vizualno atraktivna, jednostavna za korištenje, i prilagođena svim korisnicima – od onih koji žele smirenje do onih koji traže motivaciju ili sreću. Aplikacija koristi psihološke metode poput semantičkog diferencijala za praćenje promjena u raspoloženju.
+Pjesme koje se mogu slušati pohranjene su u bazi na **Dropboxu**, podijeljene u četiri kategorije: sretne, tužne, motivirajuće i smirujuće pjesme. Pjesma koja se reproducira korisniku nasumično se odabire iz one kategorije koja odgovara njegovom trenutnom emocionalnom stanju.
 
-**Funkcijski zahtjevi**
-Funkcionalni zahtjevi
-1. Početni ekran (Home Screen)
-•	Na početnom ekranu prikazuju se četiri glavne kategorije emocija (Calmness, Happiness, Motivation, Sadness). Na stranici je napisana motivacija aplikacije kao i sažetak istraživanja korelacije boja i emocija.
-•	Korisnik jednostavno odabere kategoriju emocionalnog stanja na temelju kako se želi osjećati.
-•	Stranica sadrži dugme za poveznicu na informacije korisničkog računa kao i pregled rezultata prijašnjih osobnih i cjelokupnih tuđih anketa.
-•	Prije početka potrebno je prijaviti se ili stvoriti račun te ispuniti osobne informacije računa. Osobne informacije služe u svrhu stvaranja statističke slike baze korisnika. Sigurno pohranjivanje korisničkih podataka i odgovora na upitnike, u skladu s GDPR-om.
+Aplikacija uključuje ulogu administratora koji se mora ulogirati kako bi imao pristup anonimnim rezultatima anketa korisnika. Ovi podaci mogu se koristiti u istraživačke svrhe kako bi se analiziralo utjecaj glazbe na emocionalna stanja.
 
-2. Odabir pjesama
-•	Nakon odabira kategorije, prikazuju se dostupne pjesme (20 pjesama po kategoriji). Korisnik odabire tri pjesme koje želi poslušati.
-•	Vizualni elementi poput albuma, efekata zvuka, animacije koja prati izbor pjesama, doprinose atraktivnosti aplikacije. 
+**MoodTune** je vizualno atraktivna, jednostavna za korištenje i intuitivna aplikacija koja je prilagođena širokom krugu korisnika – od onih koji traže smirenje do onih koji žele motivaciju ili sreću.
 
-3. Upitnik prije slušanja pjesama
-•	Prije slušanja pjesama, korisnik ispunjava upitnik koji bilježi trenutno raspoloženje. Ovdje se koriste parovi atributa (npr. sretan—tužan, miran—nemiran) postavljeni na skali od 1 do 7.
-•	Upitnik može biti prezentiran kroz intuitivne slider-e ili dugmad kako bi korisnik jednostavno ocijenio svoje trenutno stanje.
-•	Korisnik ujedno može reprezentirati svoje raspoloženje izbornikom boje.
+---
 
-4. Slušanje pjesama
-•	Pjesme se reproduciraju uz opciju pauziranja ili preskakanja. Korisnik može kontrolirati koliko puta želi preslušati pjesme, no aplikacija ih automatski vodi kroz proces.
-•	Dok pjesme sviraju, vizualni efekti u pozadini mogu se mijenjati, npr. svjetlosni tonovi, animacije koje prate raspoloženje ili motiv pjesme.
+## **Razlozi za razvoj MoodTune**
 
-5. Upitnik nakon slušanja pjesama
-•	Po završetku slušanja, korisnik ispunjava isti upitnik kako bi se utvrdila promjena raspoloženja.
-•	Nakon što korisnik ispuni drugi upitnik, aplikacija mu može vizualno prikazati usporedbu (npr. grafikon ili promjena boja) kako bi mogao vidjeti kako su pjesme utjecale na njegovo raspoloženje.
+### 1. Praćenje emocionalnih promjena pomoću glazbe
+MoodTune omogućava korisnicima da svjesno prate kako glazba utječe na njihovo raspoloženje. Na početku korisnik označava svoje trenutne emocije i postavlja željeni cilj za svoje raspoloženje nakon slušanja. Ovaj proces može biti koristan za osobnu introspekciju i terapeutske svrhe.
 
-6. Rezultati i praćenje promjena
-•	Aplikacija bi mogla prikazivati povijest raspoloženja korisnika kroz vremenski okvir, omogućujući mu da prati kako različite pjesme i emocije utječu na njegovo opće raspoloženje.
-•	Korisnik dobiva statistički pregled svojih odgovora i može dobiti preporuke za pjesme u budućnosti, temeljene na analizi njegovih preferencija i reakcija.
+### 2. Personalizirano iskustvo
+Kroz odabir različitih kategorija pjesama (sretne, tužne, motivirajuće, smirujuće), korisnici mogu prilagoditi aplikaciju svojim emocionalnim potrebama. Pjesme se odabiru nasumično unutar tih kategorija, čime se korisnicima pruža personalizirano iskustvo koje odgovara njihovim željama i trenutnom emocionalnom stanju.
 
-7. Društveni aspekt
-•	Korisnici mogu podijeliti svoje rezultate ili pjesme koje im pomažu s prijateljima ili na društvenim mrežama.
-•	Rezultati su prikazani u obliku različitih grafikona koji imaju mogućnost filtriranja po pojedinim atributima pjesama i korisnika.
+### 3. Pružanje vrijednih podataka za istraživanja
+Kroz administratorovu funkciju, aplikacija omogućava prikupljanje anonimnih podataka o emocionalnim reakcijama korisnika na glazbu. Ovi podaci mogu poslužiti u daljnjim istraživanjima utjecaja glazbe na emocionalna stanja i pomoći u boljem razumijevanju kako različite vrste glazbe mogu pozitivno ili negativno utjecati na raspoloženje.
 
-8. Administracija i istraživački podaci
-•	Ako se aplikacija koristi u istraživačke svrhe, administratori mogu prikupljati podatke o promjeni raspoloženja (anonimno), što može poslužiti za daljnju analizu o utjecaju glazbe na emocionalna stanja.
+### 4. Jednostavnost korištenja i pristup svim korisnicima
+MoodTune je dizajniran tako da bude jednostavan za korištenje i vizualno atraktivan, omogućujući širokom krugu korisnika, bez obzira na tehničku vještinu, da lako koristi aplikaciju. Bilo da korisnici traže smirenje, motivaciju ili sreću, aplikacija im omogućava prilagodbu prema njihovim potrebama.
 
-Nefunkcionalni zahtjevi
-1. Performanse: 
-•	Brzi odziv aplikacije s maksimalnim vremenom učitavanja pjesama do 5 sekundi.
+### 5. Poticanje emocionalne svijesti i samopomoći
+Aplikacija pomaže korisnicima u razvoju emocionalne svijesti i samopomoći. Praćenje emocionalnih promjena kroz glazbu može pomoći korisnicima da prepoznaju obrasce u svom raspoloženju i ponašanju, a glazba može poslužiti kao alat za poboljšanje emocionalne ravnoteže i samopomoći.
 
-2. Sigurnost: 
-•	Sigurna autentifikacija, šifriranje podataka i GDPR usklađenost.
+### 6. Potencijal za proširenje i daljnje prilagodbe
+MoodTune je dizajniran s fleksibilnošću, omogućujući proširenje i dodavanje novih funkcionalnosti. Aplikacija se može proširiti dodavanjem novih pjesama, kategorija raspoloženja ili anketa, što omogućava daljnje istraživanje i inovacije.
 
-3. Skalabilnost: 
-•	Podrška za povećanje broja korisnika i dinamičku bazu podataka.
+---
 
-4. UI/U: 
-•	Intuitivno, atraktivno i responzivno korisničko sučelje prilagođeno svim uređajima.
+## **Mogućnosti prilagodbe aplikacije**
 
-5. Održavanje: 
-•	Brza automatska ažuriranja baze podataka.
-6. Klijent-poslužitelj:
-•	Aplikacija je izvedena u arhitekturi klijent-poslužitelj. Omogućava jasnu podjelu između klijentske strane i poslužiteljske strane.
+### 1. Višenamjensko anketiranje
+Baza podataka može se proširiti za višenamjensko anketiranje. Iako se trenutno koristi za praćenje učinka glazbe na raspoloženje, aplikacija može podržati različite vrste anketa, uključujući one koje se odnose na različite teme i emocionalna stanja korisnika. Time se omogućuje šira primjena aplikacije u istraživanjima.
 
-**Tehnologija**
-Za  komunikaciju unutar našeg tima koristimo Discord i WhatsApp, koji nam omogućava brzu razmjenu ideja i suradnju u realnom vremenu. 
-Odabrali smo React za frontend, koji omogućava izradu interaktivnih i dinamičnih korisničkih sučelja.
-Za backend odabrali smo Javu i Spring Framework.
+### 2. Upravljanje pjesmama, emocijama i anketama
+Kroz **MVC Spring Boot** servise, administrator može unositi, uređivati i brisati pjesme, emocije, pitanja i odgovore u sustav. To omogućava laku i učinkovitu administraciju sadržaja aplikacije, uključujući dodavanje novih pjesama, kategorija emocija te ažuriranje anketa prema potrebama korisnika ili istraživačkih ciljeva.
 
-**Članovi tima**
-Petra Predrijevac 
-Ema Bradić 
-Antonio Poleto 
-Dorotea Požega
-Patrick Mraz
+### 3. Modularni frontend
+Frontend aplikacije je modularan i može se proširivati s novim komponentama. To omogućava brzu prilagodbu aplikacije novim funkcionalnostima, kao što su dodatne ankete, nove kategorije raspoloženja ili proširenja vezana uz interakciju korisnika, bez potrebe za velikim promjenama u postojećem kodu.
+
+---
+
+## **Skup korisnika zainteresiranih za rješenje**
+
+- **Korisnici** koji žele poboljšati svoje emocionalno stanje putem glazbe, pratiti promjene raspoloženja i koristiti glazbu kao alat za smanjenje stresa, poboljšanje raspoloženja, povećanje motivacije ili postizanje smirenosti.
+  
+- **Stručnjaci u području mentalnog zdravlja** koji žele koristiti aplikaciju kao alat za praćenje i analizu emocionalnog stanja svojih klijenata, čime aplikacija može poslužiti kao pomoć u terapiji i procesu samopomoći.
+  
+- **Istraživači** u područjima psihologije, neuroznanosti i glazbene terapije koji žele koristiti aplikaciju za analizu utjecaja glazbe na emocionalna stanja i dobrobit korisnika.
+
+
+## **Razvojni tim**
+Antonio Poleto – backend, baze podataka, testiranje
+Dorotea Požega – frontend, UI/UX, deployment
+Ema Bradić – frontend, UI/UX, dokumentacija
+Patrick Mraz – backend, baze podataka, deployment, dokumentacija, voditelj grupe
+Petra Predrijevac – frontend, UI/UX, dokumentacija
