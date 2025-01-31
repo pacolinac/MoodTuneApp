@@ -1,65 +1,38 @@
-Zahtjevi
+Funkcionalni zahtjevi:
+F-001: Sustav omogućuje korisnicima pregled informacija o aplikaciji i načinu njenog rada. Prioritet: Visok
 
-Neregistrirani korisnik može:
-  1.	Pregledati informacije o aplikaciji i kako radi.
-  2.	Pristupiti procesu stvaranja korisničkog računa.
-  3.	Vidjeti popis dostupnih pjesama i kategorija (bez detalja).
-Registracija korisnika: 
-  4. Započinje unosom korisničkog imena i email adrese. 
-  5. Sustav šalje link za aktivaciju računa putem emaila. 
-  6. Prilikom aktivacije unosi se lozinka za dovršetak registracije.
-Registrirani korisnik može: 
-  7. Birati kategoriju raspoloženja (calmness, happiness, motivation, sadness). 
-  8. Pregledati i slušati pjesme u odabranoj kategoriji. 
-  9. Odabrati do tri pjesme iz jedne kategorije za slušanje. 
-  10. Popuniti upitnik (semantički diferencijal) prije slušanja pjesama. 
-  11. Slušati pjesme prema vlastitom izboru. 
-  12. Popuniti upitnik nakon slušanja pjesama kako bi ocijenio promjenu raspoloženja. 
-  13. Pregledati rezultate svojih odgovora i usporediti ih. 
-  14. Pohraniti povijest svojih rezultata za kasniju analizu. 
-  15. Urediti svoj korisnički profil (ime, email, preferirane kategorije).
-Sustav (aplikacija): 
-  17. Pohranjuje odgovore korisnika za analizu promjene raspoloženja. 
-  18. Prilagođava preporuke pjesama na temelju prethodnih ocjena korisnika. 
-  19. Prikazuje vizualno atraktivne grafove i dijagrame promjene raspoloženja. 
-  (20.) Šalje obavijesti putem aplikacije i emaila o novim pjesmama ili ažuriranjima. 
-  21. Omogućava automatsku sinkronizaciju rezultata među uređajima korisnika.
-Funkcionalnosti administratora:
-Upravljanje korisnicima:
-  1.	Pregled, uređivanje i brisanje korisničkih računa.
-  2.	Resetiranje lozinki korisnicima na zahtjev.
-  3.	Pregled korisničke aktivnosti (poslušane pjesme, ispunjeni upitnici, povijest raspoloženja).
-Upravljanje sadržajem aplikacije:
-  4.	Dodavanje, uređivanje i uklanjanje pjesama u svim kategorijama (calmness, happiness, motivation, sadness).
-  5.	Upravljanje kategorijama emocija (dodavanje novih kategorija, uređivanje postojećih).
-  6.	Pregled statistika korištenja pjesama (najslušanije pjesme, pjesme s najvišim ocjenama).
-Praćenje i analiza podataka:
-  7.	Pregled statistika o promjenama raspoloženja korisnika nakon slušanja pjesama.
-  8.	Generiranje izvještaja o ponašanju korisnika (npr. koje kategorije najviše biraju, koji je najčešći obrazac promjene raspoloženja).
-  9.	Analiza povijesti upitnika za korisnike radi poboljšanja preporuka i korisničkog iskustva.
-Upravljanje upitnicima:
-  10.	Dodavanje, uređivanje i brisanje pitanja u semantičkom diferencijalu.
-  11.	Konfiguriranje različitih verzija upitnika za različite korisničke grupe.
-  12.	Prilagodba težine ili vrste pitanja na temelju povratnih informacija od korisnika.
-Obavijesti i komunikacija:
-  13.	Slanje globalnih obavijesti svim korisnicima (npr. ažuriranja aplikacije, nove pjesme).
-  14.	Slanje personaliziranih obavijesti pojedinim korisnicima ili grupama (npr. preporuke pjesama na temelju njihovih preferencija).
-  15.	Upravljanje email obavijestima i push notifikacijama.
-Sigurnost i održavanje:
-  16.	Praćenje sigurnosnih prijetnji i aktivnosti (npr. neuspjeli pokušaji prijave, neobična aktivnost).
-  17.	Vođenje sigurnosnih kopija korisničkih podataka i pjesama.
-  18.	Praćenje stabilnosti aplikacije (monitoring servera, praćenje performansi).
-Generiranje izvještaja:
-  19.	Izvještaji o najaktivnijim korisnicima, najpopularnijim pjesmama i kategorijama.
-  20.	Pregled i analiza statistika o postignutim ciljevima aplikacije (npr. utjecaj glazbe na raspoloženje).
-  21.	Izvještaji o korisnicima koji su prijavili tehničke probleme ili dali povratne informacije.
+Korisnik može pregledati jasne informacije o aplikaciji i njenim funkcijama.
+F-002: Sustav omogućuje pristupanje i odgovaranje na anketu. Prioritet: Visok
 
-________________________________________
+Korisnik može pristupiti anketi i odgovoriti na pitanja prema unaprijed definiranim kategorijama.
+F-003: Sustav omogućuje korisnicima odabir kategorije raspoloženja (calmness, happiness, motivation, sadness). Prioritet: Visok
+
+Korisnik može odabrati jednu od četiri kategorije raspoloženja.
+F-004: Sustav omogućuje korisnicima slušanje nasumičnih pjesama unutar odabrane kategorije. Prioritet: Visok
+
+Korisnik može slušati pjesme koje se nasumično biraju iz odabrane kategorije.
+F-005: Sustav omogućuje korisnicima ispunjavanje upitnika (semantički diferencijal) prije slušanja pjesama. Prioritet: Visok
+
+Korisnik ispunjava upitnik prije slušanja pjesama kako bi ocijenio svoje trenutno raspoloženje.
+F-006: Sustav omogućuje korisnicima ispunjavanje upitnika nakon slušanja pjesama kako bi ocijenili promjenu raspoloženja. Prioritet: Visok
+
+Korisnik ispunjava upitnik nakon slušanja pjesama kako bi ocijenio promjene u svom raspoloženju.
+F-007: Sustav omogućuje administratorima dodavanje, uređivanje i uklanjanje pjesama u svim kategorijama. Prioritet: Visok
+
+Administrator može dodavati, mijenjati ili uklanjati pjesme unutar kategorija.
+F-008: Sustav omogućuje administratorima pregled svih pjesama u svim kategorijama. Prioritet: Visok
+
+Administrator može pregledati popis svih pjesama unutar svih kategorija.
+F-009: Sustav omogućuje administratorima pregled svih odgovora na anketu. Prioritet: Visok
+
+Administrator može pregledati odgovore svih korisnika na anketu.
 Nefunkcionalni zahtjevi:
-1.	Aplikacija mora učitavati sadržaj u roku od 3-5 sekundi.
-2.	Aplikacija mora podržavati povećanje broja korisnika bez pada performansi.
-3.	Svi korisnički podaci, uključujući odgovore i povijest raspoloženja, moraju biti šifrirani.
-4.	Korisnici moraju imati mogućnost anonimnog korištenja aplikacije, a podaci se moraju prikupljati u skladu s GDPR-om.
-5.	Aplikacija mora biti vizualno atraktivna i jednostavna za korištenje, s intuitivnim navigacijskim elementima.
-6.	Aplikacija mora omogućavati jednostavna i redovita ažuriranja.
-7.	Omogućiti slušanje pjesama i ispunjavanje upitnika bez internetske veze, s kasnijom sinkronizacijom podataka.
+NF-1.1: Sustav treba omogućiti brz odziv na akcije korisnika, s vremenom odziva manjim od 3 sekunde. Prioritet: Srednji
+NF-1.2: Sustav treba omogućiti istovremeno korištenje od strane najmanje 500 korisnika bez smanjenja performansi. Prioritet: Srednji
+NF-1.3: Sustav mora biti optimiziran za rad na mobilnim uređajima, tabletima i računalima. Prioritet: Visok
+NF-2.1: Web stranica mora omogućiti korisnicima pristup s bilo kojeg uređaja uz kompatibilnost s najnovijim preglednicima. Prioritet: Visok
+NF-3.1: Sustav treba biti oblikovan tako da omogućuje jednostavno održavanje i proširivanje novih funkcionalnosti. Prioritet: Srednji
+NF-3.2: Sustav treba imati dostatnu dokumentaciju za korisnike i administratore. Prioritet: Srednji
+NF-3.3: Kôd sustava treba biti dokumentiran prema industrijskim standardima, uključujući komentare u kodu i uputama. Prioritet: Niski
+NF-4.1: Sučelje treba biti responzivno i optimizirano za mobilne uređaje, omogućujući korisnicima jednako kvalitetno iskustvo na svim platformama. Prioritet: Visok
+NF-4.2: Navigacija kroz web stranicu mora biti jednostavna i jasna, s minimalnim brojem koraka za obavljanje osnovnih funkcija. Prioritet: Visok
