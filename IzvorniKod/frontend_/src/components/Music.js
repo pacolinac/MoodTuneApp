@@ -38,6 +38,7 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
         
         if (currentAudio.current) {
             if (!isAudioPlaying) {
+                currentAudio.current.load();
                 currentAudio.current.play();
             } else {
                 currentAudio.current.pause();
