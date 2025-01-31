@@ -33,32 +33,44 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
         fetchSong();
     }, [formData.stanjeZeljeno, setOdaziv]);
 
-    const handleAudioPlay = () => {
-        setIsAudioPlaying(!isAudioPlaying);
-        
-        if (currentAudio.current) {
-            if (!isAudioPlaying) {
-                currentAudio.current.load();
-                currentAudio.current.play();
-            } else {
-                currentAudio.current.pause();
-            }
+  const handleAudioPlay = async () => {
+    if (currentAudio.current) {
+      if (!isAudioPlaying) {
+        try {
+          await currentAudio.current.play();
+          setIsAudioPlaying(true);
+        } catch (error) {
+          console.error("Greška pri pokretanju reprodukcije:", error);
         }
-    };
+      } else {
+        currentAudio.current.pause();
+        setIsAudioPlaying(false);
+      }
+    }
+  };
 
-    const handleAudioUpdate = () => {
-        const progress = parseInt((currentAudio.current.currentTime / currentAudio.current.duration) * 100);
-        setAudioProgress(isNaN(progress) ? 0 : progress);
-    };
+  const handleAudioUpdate = () => {
+    if (currentAudio.current && currentAudio.current.duration) {
+      const progress = parseInt(
+        (currentAudio.current.currentTime / currentAudio.current.duration) * 100,
+        10
+      );
+      setAudioProgress(isNaN(progress) ? 0 : progress);
+    }
+  };
 
-    const handleMusicProgressBar = (e) => {
-        setAudioProgress(e.target.value);
-        currentAudio.current.currentTime = (e.target.value * currentAudio.current.duration) / 100;
-    };
+  const handleMusicProgressBar = (e) => {
+    const newProgress = Number(e.target.value);
+    setAudioProgress(newProgress);
+    if (currentAudio.current && currentAudio.current.duration) {
+      currentAudio.current.currentTime = (newProgress * currentAudio.current.duration) / 100;
+    }
+  };
 
-    const handleAudioEnded = () => {
-        setIsMusicCompleted(true);
-    };
+  const handleAudioEnded = () => {
+    setIsMusicCompleted(true);
+    setIsAudioPlaying(false);
+  };
 
     const style = {
         backgroundColor:
@@ -80,10 +92,8 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
                         ref={currentAudio}
                         onTimeUpdate={handleAudioUpdate}
                         onEnded={handleAudioEnded}
-                        preload='none'
-                        type="audio/mpeg"
+                        preload='auto'
                     ></audio>
-
                     <p>{musicData.naslov} - {musicData.autor}</p>
                 </>
             ) : (
@@ -92,9 +102,9 @@ function Music({ formData, setOdazivPost, setIsMusicCompleted }) {
 
             <div className="music-container" style={style}>
                 <div className='musicControlers'>
-                    <i className="play" onClick={handleAudioPlay}>
+                    <button className="play" onClick={handleAudioPlay}>
                         {isAudioPlaying ? "||" : "►"}
-                    </i>
+                    </button>
                 </div>
 
                 <input
